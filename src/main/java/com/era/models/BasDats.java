@@ -89,6 +89,9 @@ public class BasDats {
     @Column(name = "rutcer", nullable = true, length = 2045)
     private String rutcer;
     
+    @JsonProperty("contribuyentType")
+    @Column(name = "tipo_contribuyente", nullable = true, length = 1) private String contribuyentType = "M";
+    
     @Column(name = "rutkey", nullable = true, length = 2045)
     private String rutkey;
     
@@ -135,6 +138,14 @@ public class BasDats {
         this.codemp = codemp;
     }
 
+    public String getContribuyentType() {
+        return contribuyentType;
+    }
+
+    public void setContribuyentType(String contribuyentType) {
+        this.contribuyentType = contribuyentType;
+    }
+    
     public String getBd() {
         return bd;
     }

@@ -23,17 +23,8 @@ public class CCountry {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "c_Pais", nullable = false, length = 5)
-    private String code = "";
-    
-    @Column(name = "val", nullable = true)
-    private float value = 0;
-    
-    @Column(name = "Descripcion", nullable = true, length = 255)
-    private String description;
-    
-    @Column(name = "Formato_de_código_postal", nullable = true, length = 45)
-    private String formatCP;
+    @Column(name = "Agrupaciones", nullable = false, length = 25)
+    private String Agrupaciones = "";
     
     @Column(name = "Formato_de_Registro_de_Identidad_Tributaria", nullable = true, length = 255)
     private String Formato_de_Registro_de_Identidad_Tributaria;
@@ -41,14 +32,26 @@ public class CCountry {
     @Column(name = "Validación_del_Registro_de_Identidad_Tributaria", nullable = true, length = 255)
     private String Validación_del_Registro_de_Identidad_Tributaria = "";
     
-    @Column(name = "Agrupaciones", nullable = false, length = 25)
-    private String Agrupaciones = "";
-
+    @Column(name = "c_Pais", nullable = false, length = 5)
+    private String code = "";
+    
+    @Column(name = "Descripcion", nullable = true, length = 255)
+    private String description;
+    
     @Column(name = "estac", nullable = false,length = 30) private String estac;
-@Column(name = "sucu", nullable = false,length = 30) private String sucu;
-@Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
-@Column(name = "falt", nullable = true) private Date falt;
-@Column(name = "fmod", nullable = false) private Date fmod; 
+    @Column(name = "falt", nullable = true) private Date falt;
+    @Column(name = "fmod", nullable = false) private Date fmod; 
+
+    @Column(name = "Formato_de_código_postal", nullable = true, length = 45)
+    private String formatCP;
+    
+    @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
+   
+    @Column(name = "sucu", nullable = false,length = 30) private String sucu;
+    
+    @Column(name = "val", nullable = true)
+    private float value = 0;        
+   
 
     public int getId() {
         return id;
@@ -154,5 +157,6 @@ public class CCountry {
         this.fmod = fmod;
     }
 
+    
 
 }
