@@ -83,6 +83,9 @@ public class BasDats {
     @Column(name = "lugexp", nullable = true, length = 255)
     private String lugexp;
     
+    @Column(name = "noexten", nullable = true, length = 21)
+    private String noexten = "";    
+    
     @Column(name = "regfisc", nullable = true, length = 255)
     private String regfisc;
     
@@ -394,5 +397,13 @@ public class BasDats {
         this.fmod = fmod;
     }
 
-                
+    public String getNoexten() {
+        return noexten;
+    }
+
+    public void setNoexten(String noexten) {
+        this.noexten = noexten;
+    }
+
+    
 }
