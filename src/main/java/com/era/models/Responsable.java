@@ -14,9 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Index;
-//@Index(name="")
 
-@Entity @Table(name = "",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Responsable {
+@Entity @Table(name = "Responsable",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Responsable {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="responsable_cod") @Column(name = "cod", nullable = false,length = 30) private String cod;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
