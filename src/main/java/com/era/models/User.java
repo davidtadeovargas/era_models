@@ -22,20 +22,62 @@ public class User {
     @Column(name = "id_id", nullable = false)
     private int id;
     
+    @Column(name = "street", nullable = true, length = 50)
+    private String street;
+    
+    @Column(name = "commission", nullable = true, columnDefinition = "float default 0")
+    private float commission = 0;
+    
+    @Column(name = "colony", nullable = true, length = 50)
+    private String colony;
+    
+    @Column(name = "cp", nullable = true, columnDefinition = "int default 0")
+    private int cp;
+    
+    @Column(name = "phone", nullable = true, length = 15)
+    private String phone;
+    
+    @Column(name = "cellphone", nullable = true, length = 15)
+    private String cellphone;
+    
+    @Column(name = "state", nullable = true, length = 50)
+    private String state;
+    
+    @Column(name = "country", nullable = true, length = 50)
+    private String country;
+    
+    @Column(name = "noext", nullable = true, length = 20)
+    private String noext;
+    
+    @Column(name = "noint", nullable = true, length = 20)
+    private String noint;
+    
+    @Column(name = "city", nullable = true, length = 50)
+    private String city;
+    
+    @Column(name = "ptovta", nullable = true, columnDefinition = "boolean default false")
+    private boolean ptovta = false;
+    
+    @Column(name = "email", nullable = true, length = 50)
+    private String email;
+    
     @Column(name = "estac", nullable = false, length = 30)
     private String station;
     
     @Column(name = "52m", nullable = false)
     private boolean m52 = false;
     
-    @Column(name = "ptovta", nullable = false)
+    @Column(name = "supervisor", nullable = true, columnDefinition = "boolean default false")
+    private boolean supervisor = false;
+    
+    @Column(name = "user_of_sales_of_point", nullable = false, columnDefinition = "boolean default false")
     private boolean userOfsalesOfPoint = false;
     
-    @Column(name = "descu", nullable = false)
+    @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
     private float disccount = 0;
     
     @Column(name = "cort", nullable = false, length = 3)
-    private String cort = "";
+    private String cort = "0";
     
     @Column(name = "pass", nullable = false, length = 255)
     private String password;
@@ -52,11 +94,11 @@ public class User {
     @Column(name = "nocaj", nullable = false, length = 30)
     private String cashNumber;
     
-    @Column(name = "vend", nullable = true)
+    @Column(name = "vend", nullable = true, columnDefinition = "boolean default false")
     private boolean salesMan = false;
     
-    @Column(name = "habdesc", nullable = true)
-    private int enableDisccount = 0;
+    @Column(name = "habdesc", nullable = true, columnDefinition = "boolean default false")
+    private boolean enableDisccount = false;
     
     @Column(name = "imptic", nullable = true, length = 255)
     private String ticketPrinter = "";
@@ -64,7 +106,7 @@ public class User {
     @Column(name = "impfac", nullable = true, length = 255)
     private String invoicePrinter = "";
 
-    @Column(name = "admcaj", nullable = true)
+    @Column(name = "admcaj", nullable = true, columnDefinition = "boolean default false")
     private boolean casherAdmin = false;
     
     @Column(name = "almacen", nullable = true,length = 255)
@@ -81,6 +123,14 @@ public class User {
         this.id = id;
     }
 
+    public boolean isSupervisor() {
+        return supervisor;
+    }
+
+    public void setSupervisor(boolean supervisor) {
+        this.supervisor = supervisor;
+    }   
+    
     public String getStation() {
         return station;
     }
@@ -169,11 +219,11 @@ public class User {
         this.salesMan = salesMan;
     }
 
-    public int getEnableDisccount() {
+    public boolean getEnableDisccount() {
         return enableDisccount;
     }
 
-    public void setEnableDisccount(int enableDisccount) {
+    public void setEnableDisccount(boolean enableDisccount) {
         this.enableDisccount = enableDisccount;
     }
 
@@ -225,6 +275,107 @@ public class User {
         this.fmod = fmod;
     }
 
-          
-    
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getColony() {
+        return colony;
+    }
+
+    public void setColony(String colony) {
+        this.colony = colony;
+    }
+
+    public int getCp() {
+        return cp;
+    }
+
+    public void setCp(int cp) {
+        this.cp = cp;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getNoext() {
+        return noext;
+    }
+
+    public void setNoext(String noext) {
+        this.noext = noext;
+    }
+
+    public String getNoint() {
+        return noint;
+    }
+
+    public void setNoint(String noint) {
+        this.noint = noint;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public boolean isPtovta() {
+        return ptovta;
+    }
+
+    public void setPtovta(boolean ptovta) {
+        this.ptovta = ptovta;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public float getCommission() {
+        return commission;
+    }
+
+    public void setCommission(float commission) {
+        this.commission = commission;
+    }        
 }
