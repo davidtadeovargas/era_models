@@ -40,9 +40,6 @@ public class Warehouse {
     @Column(name = "dir3", nullable = true, length = 255)
     private String address3 = "";
     
-    @Column(name = "actfij", nullable = true)
-    private boolean activoFijo = false;
-    
     @Column(name = "estac", nullable = false, length = 30)
     private String station;
     
@@ -109,14 +106,6 @@ public class Warehouse {
 
     public void setAddress3(String address3) {
         this.address3 = address3;
-    }
-
-    public boolean isActivoFijo() {
-        return activoFijo;
-    }
-
-    public void setActivoFijo(boolean activoFijo) {
-        this.activoFijo = activoFijo;
     }
 
     public String getStation() {

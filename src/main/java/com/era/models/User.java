@@ -61,8 +61,8 @@ public class User {
     @Column(name = "email", nullable = true, length = 50)
     private String email;
     
-    @Column(name = "estac", nullable = false, length = 30)
-    private String station;
+    @Column(name = "code", nullable = false, length = 30)
+    private String code;
     
     @Column(name = "52m", nullable = false)
     private boolean m52 = false;
@@ -82,17 +82,17 @@ public class User {
     @Column(name = "pass", nullable = false, length = 255)
     private String password;
     
-    @Column(name = "estacglo", nullable = false, length = 30)
-    private String estacglo = "";
+    @Column(name = "estac", nullable = false, length = 30)
+    private String estac = "";
     
     @Column(name = "nom", nullable = true, length = 255)
     private String name;
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal = "";
+    private String sucu = "";
     
-    @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber;
+    @Column(name = "nocaj", nullable = true, length = 30)
+    private String nocaj;
     
     @Column(name = "vend", nullable = true, columnDefinition = "boolean default false")
     private boolean salesMan = false;
@@ -130,14 +130,14 @@ public class User {
     public void setSupervisor(boolean supervisor) {
         this.supervisor = supervisor;
     }   
-    
-    public String getStation() {
-        return station;
+
+    public String getCode() {
+        return code;
     }
 
-    public void setStation(String station) {
-        this.station = station;
-    }
+    public void setCode(String code) {
+        this.code = code;
+    }        
 
     public boolean isM52() {
         return m52;
@@ -179,14 +179,6 @@ public class User {
         this.password = password;
     }
 
-    public String getEstacglo() {
-        return estacglo;
-    }
-
-    public void setEstacglo(String estacglo) {
-        this.estacglo = estacglo;
-    }
-
     public String getName() {
         return name;
     }
@@ -195,22 +187,30 @@ public class User {
         this.name = name;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
+    public String getNocaj() {
+        return nocaj;
+    }
+
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
+    }    
+    
     public boolean isSalesMan() {
         return salesMan;
     }
