@@ -5,6 +5,7 @@
  */
 package com.era.models;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "c_tiporelacion", uniqueConstraints = {})
-public class CTipoRelacion {
+public class CTipoRelacion implements Serializable {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "venta", nullable = false) private int id;
     
