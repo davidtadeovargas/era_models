@@ -22,6 +22,36 @@ public class User {
     @Column(name = "id_id", nullable = false)
     private int id;
     
+    @Column(name = "code", nullable = false, length = 30)
+    private String code;
+    
+    @Column(name = "user_of_sales_of_point", nullable = false, columnDefinition = "boolean default false")
+    private boolean userOfsalesOfPoint = false;
+    
+    @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
+    private float disccount = 0;
+    
+    @Column(name = "cort", nullable = false, length = 3)
+    private String cort = "0";
+    
+    @Column(name = "pass", nullable = false, length = 255)
+    private String password;
+    
+    @Column(name = "estac", nullable = false, length = 30)
+    private String estac = "";
+    
+    @Column(name = "52m", nullable = false)
+    private boolean m52 = false;
+    
+    @Column(name = "sucu", nullable = false, length = 30)
+    private String sucu = "";
+    
+    @Column(name = "nocaj", nullable = false, length = 30)
+    private String nocaj;
+    
+    @Column(name = "falt", nullable = false) private Date falt;
+    @Column(name = "fmod", nullable = false) private Date fmod;
+    
     @Column(name = "street", nullable = true, length = 50)
     private String street;
     
@@ -61,38 +91,13 @@ public class User {
     @Column(name = "email", nullable = true, length = 50)
     private String email;
     
-    @Column(name = "code", nullable = false, length = 30)
-    private String code;
-    
-    @Column(name = "52m", nullable = false)
-    private boolean m52 = false;
-    
     @Column(name = "supervisor", nullable = true, columnDefinition = "boolean default false")
     private boolean supervisor = false;
-    
-    @Column(name = "user_of_sales_of_point", nullable = false, columnDefinition = "boolean default false")
-    private boolean userOfsalesOfPoint = false;
-    
-    @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
-    private float disccount = 0;
-    
-    @Column(name = "cort", nullable = false, length = 3)
-    private String cort = "0";
-    
-    @Column(name = "pass", nullable = false, length = 255)
-    private String password;
-    
-    @Column(name = "estac", nullable = false, length = 30)
-    private String estac = "";
+        
     
     @Column(name = "nom", nullable = true, length = 255)
     private String name;
-    
-    @Column(name = "sucu", nullable = false, length = 30)
-    private String sucu = "";
-    
-    @Column(name = "nocaj", nullable = true, length = 30)
-    private String nocaj;
+        
     
     @Column(name = "vend", nullable = true, columnDefinition = "boolean default false")
     private boolean salesMan = false;
@@ -112,8 +117,6 @@ public class User {
     @Column(name = "almacen", nullable = true,length = 255)
     private String almacen;
     
-    @Column(name = "falt", nullable = true) private Date falt;
-@Column(name = "fmod", nullable = false) private Date fmod;
 
     public int getId() {
         return id;
