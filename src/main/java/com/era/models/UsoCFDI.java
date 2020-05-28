@@ -94,4 +94,26 @@ public class UsoCFDI {
     public void setInitVigencyDate(Date initVigencyDate) {
         this.initVigencyDate = initVigencyDate;
     }
+
+    public String getEstac() {
+        return estac;
+    }
+
+    public String getSucu() {
+        return sucu;
+    }
+
+    public String getNocaj() {
+        return nocaj;
+    }
+
+    public Date getFalt() {
+        return falt;
+    }
+
+    public Date getFmod() {
+        return fmod;
+    }
+    
+    
 }

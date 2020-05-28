@@ -222,7 +222,7 @@ public class User {
         this.salesMan = salesMan;
     }
 
-    public boolean getEnableDisccount() {
+    public boolean isEnableDisccount() {
         return enableDisccount;
     }
 
