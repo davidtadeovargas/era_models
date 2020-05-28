@@ -22,7 +22,7 @@ import java.math.BigDecimal;
   @Column(name = "canttotal", nullable = false) private BigDecimal canttotal;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
-  @Column(name = "entsal", nullable = false) private boolean entsal;
+  @Column(name = "entsal", nullable = false, columnDefinition = "boolean default false") private boolean entsal;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "noser", nullable = false) private String noser = "";

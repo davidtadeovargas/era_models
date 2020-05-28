@@ -18,7 +18,7 @@ import org.hibernate.annotations.Index;
 @Entity @Table(name = "tipscamb") public class Tipscamb {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="mon") @Column(name = "mon", nullable = false,length = 30) private String mon;
-  @Column(name = "tipcam", nullable = true) private float tipcam;  
+  @Column(name = "tipcam", nullable = true, columnDefinition = "float default 0") private float tipcam;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;

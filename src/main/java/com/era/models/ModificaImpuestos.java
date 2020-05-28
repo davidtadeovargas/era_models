@@ -17,7 +17,7 @@ import javax.persistence.Id;
 
 @Entity@Table(name = "modifica_impuestos")public class ModificaImpuestos {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "venta", nullable = false) private int venta;
-  @Column(name = "partida", nullable = true) private int partida;
+  @Column(name = "partida", nullable = true, columnDefinition = "int default 0") private int partida;
   @Column(name = "total_anterior", nullable = true) private BigDecimal total_anterior;
   @Column(name = "total_nuevo", nullable = true) private BigDecimal total_nuevo;
   @Column(name = "estac", nullable = false,length = 30) private String estac;

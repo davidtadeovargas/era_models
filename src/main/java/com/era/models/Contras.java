@@ -17,11 +17,11 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "contras",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_idp"})}) public class Contras {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Column(name = "id_idp", nullable = false) private int id_idp;  
+  @Column(name = "id_idp", nullable = false, columnDefinition = "int default 0") private int id_idp;  
   @Index(name="contras_prov") @Column(name = "prov", nullable = false,length = 30) private String prov;
   @Column(name = "respon", nullable = false,length = 100) private String respon;
   @Index(name="contras_comp") @Column(name = "comp", nullable = false,length = 30) private String comp;
-  @Column(name = "tot", nullable = true) private float tot;
+  @Column(name = "tot", nullable = true, columnDefinition = "float default 0") private float tot;
   @Column(name = "fech", nullable = true) private Date fech = new Date();
   @Column(name = "falt", nullable = true) private Date falt;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;

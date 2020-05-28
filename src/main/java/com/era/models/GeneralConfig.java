@@ -29,16 +29,16 @@ public class GeneralConfig {
     @Column(name = "conf", nullable = false, length = 45)
     private String configuration;
     
-    @Column(name = "val", nullable = false, length = 11)
+    @Column(name = "val", nullable = false, length = 11, columnDefinition = "int default 0")
     private int value;
     
-    @Column(name = "nume", nullable = true)
+    @Column(name = "nume", nullable = true, columnDefinition = "float default 0")
     private float  number = 0;
     
     @Column(name = "estac", nullable = false, length = 30)
     private String station;
     
-    @Column(name = "dia", nullable = true)
+    @Column(name = "dia", nullable = true, columnDefinition = "int default 0")
     private int day = 0;
     
     @Column(name = "envia", nullable = false)
@@ -47,7 +47,7 @@ public class GeneralConfig {
     @Column(name = "asun", nullable = true, length = 255)
     private String razon = "";
     
-    @Column(name = "anio", nullable = true)
+    @Column(name = "anio", nullable = true, columnDefinition = "int default 0")
     private int  year = 0;
     
     @Column(name = "sucu", nullable = false, length = 30)

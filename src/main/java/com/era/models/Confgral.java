@@ -21,16 +21,16 @@ import org.hibernate.annotations.Index;
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="confgral_clasif") @Column(name = "clasif", nullable = false,length = 45) private String clasif;
   @Index(name="confgral_conf") @Column(name = "conf", nullable = false,length = 45) private String conf;
-  @Column(name = "val", nullable = false) private int val;
-  @Column(name = "nume", nullable = true) private float nume = 0;
+  @Column(name = "val", nullable = false, columnDefinition = "int default 0") private int val;
+  @Column(name = "nume", nullable = true, columnDefinition = "float default 0") private float nume = 0;
   @Temporal(TemporalType.TIMESTAMP)@Column(name = "falt", nullable = true) private Date falt;
   @Temporal(TemporalType.TIMESTAMP)@Column(name = "fmod", nullable = false, updatable=false) private Date fmod;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
-  @Column(name = "dia", nullable = true) private int dia = 0;
+  @Column(name = "dia", nullable = true, columnDefinition = "int default 0") private int dia = 0;
   @Column(name = "envia", nullable = true) private Date envia = new Date();
   @Column(name = "extr", nullable = true, length = 1000) private String extr = "";
   @Column(name = "asun", nullable = true, length = 255) private String asun = "";
-  @Column(name = "anio", nullable = true) private int anio = 0;
+  @Column(name = "anio", nullable = true, columnDefinition = "int default 0") private int anio = 0;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;
   
@@ -155,5 +155,6 @@ import org.hibernate.annotations.Index;
         this.nocaj = nocaj;
     }
   
+
     
 }

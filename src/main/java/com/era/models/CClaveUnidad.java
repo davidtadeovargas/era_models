@@ -22,7 +22,7 @@ public class CClaveUnidad implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_pago", nullable = false) private int id;
     
     @Id
-    @Column(name = "c_claveunidad_id", nullable = false)
+    @Column(name = "c_claveunidad_id", nullable = false, columnDefinition = "int default 0")
     private int c_claveunidad_id;
     
     @Column(name = "c_ClaveUnidad", nullable = true, length = 5)

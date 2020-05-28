@@ -15,8 +15,8 @@ import javax.persistence.Table;
 
 @Entity @Table(name = "controlexportar") public class Controlexportar {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Column(name = "id_ultimaVentaExpo", nullable = false) private int id_ultimaVentaExpo;
-  @Column(name = "id_ultimapartidaExpo", nullable = false) private int id_ultimapartidaExpo;  
+  @Column(name = "id_ultimaVentaExpo", nullable = false, columnDefinition = "int default 0") private int id_ultimaVentaExpo;
+  @Column(name = "id_ultimapartidaExpo", nullable = false, columnDefinition = "int default 0") private int id_ultimapartidaExpo;  
   @Column(name = "fechaExpo", nullable = true) private Date fechaExpo = new Date();  
   @Column(name = "fechaImpo", nullable = true) private Date fechaImpo;
   @Column(name = "tipo", nullable = false,length = 255) private String tipo = "";

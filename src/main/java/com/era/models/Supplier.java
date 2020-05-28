@@ -116,13 +116,13 @@ public class Supplier {
     @Column(name = "enestad", nullable = false, length = 255)
     private String deliverEstate = "";
     
-    @Column(name = "otramon", nullable = true)
+    @Column(name = "otramon", nullable = true, columnDefinition = "boolean default false")
     private boolean anotherCoin = true;
     
-    @Column(name = "otramonc", nullable = true)
+    @Column(name = "otramonc", nullable = true, columnDefinition = "boolean default false")
     private boolean anotherCoinC = true;
     
-    @Column(name = "bloq", nullable = false)
+    @Column(name = "bloq", nullable = false, columnDefinition = "boolean default false")
     private boolean bloq = false;
     
     @Column(name = "ctaconta", nullable = false, length = 30)
@@ -143,13 +143,13 @@ public class Supplier {
     @Column(name = "RFC", nullable = false, length = 21)
     private String rfc = "";
     
-    @Column(name = "descu", nullable = false)
+    @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
     private float disccount = 0;
     
     @Column(name = "diacred", nullable = false, length = 21)
     private String creditDays = "";                    
     
-    @Column(name = "bloqlimcred", nullable = false)
+    @Column(name = "bloqlimcred", nullable = false, columnDefinition = "boolean default false")
     private boolean bloqlimcred = false;        
     
     @Column(name = "co1", nullable = false, length = 100)

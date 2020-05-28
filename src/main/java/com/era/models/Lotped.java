@@ -44,7 +44,7 @@ public class Lotped {
     @Column(name = "fcadu", nullable = false)
     private Date fcadu = new Date();
     
-    @Column(name = "exist", nullable = false)
+    @Column(name = "exist", nullable = false, columnDefinition = "float default 0")
     private float exist;
     
     @Column(name = "estac", nullable = false, length = 30)

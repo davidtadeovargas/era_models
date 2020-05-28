@@ -33,7 +33,7 @@ public class Serie {
     @Column(name = "tip", nullable = false, length = 10)
     private String type;
     
-    @Column(name = "consec", nullable = false, length = 11)
+    @Column(name = "consec", nullable = false, length = 11, columnDefinition = "int default 0")
     private int consecutive;
 
     @Column(name = "estac", nullable = false, length = 30)

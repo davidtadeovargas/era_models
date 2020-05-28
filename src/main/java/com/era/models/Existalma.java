@@ -20,7 +20,7 @@ import org.hibernate.annotations.Index;
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Column(name = "alma", nullable = false,length = 30) private String alma;
   @Index(name="existalma_prod") @Column(name = "prod", nullable = false,length = 255) private String prod;
-  @Column(name = "exist", nullable = true) private float exist;
+  @Column(name = "exist", nullable = true, columnDefinition = "float default 0") private float exist;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;

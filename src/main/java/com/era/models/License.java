@@ -36,10 +36,10 @@ public class License {
     @Column(name = "serverDate", nullable = true, length = 100)
     private String serverDate;
     
-    @Column(name = "remainingDays", nullable = true, length = 11)
+    @Column(name = "remainingDays", nullable = true, length = 11, columnDefinition = "int default 0")
     private int remainingDays;
     
-    @Column(name = "users", nullable = true, length = 11)
+    @Column(name = "users", nullable = true, length = 11, columnDefinition = "int default 0")
     private int users;
     
     @Column(name = "estac", nullable = false,length = 30) private String estac;

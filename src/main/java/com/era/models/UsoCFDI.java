@@ -29,10 +29,10 @@ public class UsoCFDI {
     @Column(name = "Descripcion", nullable = true, length = 255)
     private String description;
     
-    @Column(name = "Persona_Fisica", nullable = true, length = 1)
+    @Column(name = "Persona_Fisica", nullable = true, length = 1, columnDefinition = "boolean default true")
     private boolean fisicPerson;
     
-    @Column(name = "Persona_Moral", nullable = true, length = 1)
+    @Column(name = "Persona_Moral", nullable = true, length = 1, columnDefinition = "boolean default true")
     private boolean moralPerson;
     
     @Column(name = "Fecha_inicio_de_vigencia", nullable = true)

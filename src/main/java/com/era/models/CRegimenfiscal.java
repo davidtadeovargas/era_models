@@ -21,16 +21,16 @@ public class CRegimenfiscal {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
     
     @Id
-    @Column(name = "c_RegimenFiscal", nullable = false)
+    @Column(name = "c_RegimenFiscal", nullable = false, columnDefinition = "int default 0")
     private int c_RegimenFiscal;
     
     @Column(name = "Descripcion", nullable = false, length = 255)
     private String description;
     
-    @Column(name = "Física", nullable = true)
+    @Column(name = "Física", nullable = true, columnDefinition = "boolean default false")
     private boolean Física;
     
-    @Column(name = "Moral", nullable = true)
+    @Column(name = "Moral", nullable = true, columnDefinition = "boolean default false")
     private boolean Moral;
     
     @Column(name = "Fecha_de_inicio_de_vigencia", nullable = true)

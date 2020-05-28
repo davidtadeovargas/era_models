@@ -21,7 +21,7 @@ import javax.persistence.Table;
   @Column(name = "tipo_documento", nullable = false, length = 60) private String tipo_documento;
   @Column(name = "serie", nullable = false,length = 30) private String serie;
   @Column(name = "folio", nullable = false,length = 30) private String folio;  
-  @Column(name = "numero_poliza", nullable = false, length = 11) private int numero_poliza;
+  @Column(name = "numero_poliza", nullable = false, length = 11, columnDefinition = "int default 0") private int numero_poliza;
   @Column(name = "tipo_poliza", nullable = false, length = 45) private String tipo_poliza;
   @Column(name = "fecha_poliza", nullable = false) private Date fecha_poliza;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;

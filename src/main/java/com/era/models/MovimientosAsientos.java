@@ -17,15 +17,15 @@ import java.math.BigDecimal;
 
 @Entity@Table(name = "movimientos_asientos")public class MovimientosAsientos {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "idAsiento", nullable = false) private int idAsiento;
-  @Column(name = "numeroMovimiento", nullable = false) private int numeroMovimiento;
+  @Column(name = "idAsiento", nullable = false, columnDefinition = "int default 0") private int idAsiento;
+  @Column(name = "numeroMovimiento", nullable = false, columnDefinition = "int default 0") private int numeroMovimiento;
   @Column(name = "cuenta", nullable = false,length = 45) private String cuenta;
   @Column(name = "importe", nullable = false,length = 60) private String importe;
   @Column(name = "tipo", nullable = false,length = 45) private String tipo;
   @Column(name = "concepto", nullable = false,length = 255) private String concepto;
   @Column(name = "referencia", nullable = false,length = 60) private String referencia;
   @Column(name = "segmento_negocio", nullable = false,length = 100) private String segmento_negocio;
-  @Column(name = "concentrado", nullable = true) private boolean concentrado = false;  
+  @Column(name = "concentrado", nullable = true, columnDefinition = "boolean default false") private boolean concentrado = false;  
   @Column(name = "porcentaje", nullable = true) private BigDecimal porcentaje = BigDecimal.ZERO; 
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;

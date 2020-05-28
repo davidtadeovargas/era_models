@@ -25,10 +25,10 @@ public class Tax {
     @Column(name = "codimpue", nullable = false, length = 30)
     private String code = "";
     
-    @Column(name = "reten", nullable = true)
+    @Column(name = "reten", nullable = true, columnDefinition = "boolean default false")
     private boolean retention = false;
     
-    @Column(name = "impueval", nullable = false)
+    @Column(name = "impueval", nullable = false, columnDefinition = "double default 0")
     private double value;
     
     @Column(name = "estac", nullable = false, length = 30)

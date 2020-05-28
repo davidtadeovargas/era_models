@@ -20,7 +20,7 @@ import org.hibernate.annotations.Index;
   @Index(name="codkit") @Column(name = "codkit", nullable = false,length = 30) private String codkit;
   @Column(name = "prod", nullable = false,length = 30) private String prod;
   @Column(name = "alma", nullable = false,length = 30) private String alma;
-  @Column(name = "cant", nullable = true) private float cant;  
+  @Column(name = "cant", nullable = true, columnDefinition = "float default 0") private float cant;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;

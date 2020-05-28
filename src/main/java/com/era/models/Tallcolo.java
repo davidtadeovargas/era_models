@@ -22,7 +22,7 @@ import org.hibernate.annotations.Index;
   @Column(name = "tall", nullable = false,length = 30) private String tall;
   @Column(name = "alma", nullable = false,length = 30) private String alma;
   @Column(name = "colo", nullable = false,length = 30) private String colo;
-  @Column(name = "exist", nullable = true) private float exist = 0;  
+  @Column(name = "exist", nullable = true, columnDefinition = "float default 0") private float exist = 0;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;

@@ -44,7 +44,7 @@ import java.math.BigDecimal;
   @Column(name = "estac", nullable = true, length = 30) private String usuario;
   @Column(name = "sucu", nullable = true, length = 30) private String sucursal;
   @Column(name = "nocaj", nullable = true, length = 30) private String caja;
-  @Column(name = "color", nullable = false, length = 11) private int color = 0;  
+  @Column(name = "color", nullable = false, length = 11, columnDefinition = "int default 0") private int color = 0;  
   @Column(name = "falt", nullable = true) private Date falt;
 @Column(name = "fmod", nullable = false) private Date fmod;
 

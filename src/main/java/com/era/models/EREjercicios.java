@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity@Table(name = "er_ejercicios")public class EREjercicios {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "ejercicio", nullable = false) private int ejercicio;
+  @Column(name = "ejercicio", nullable = false, columnDefinition = "int default 0") private int ejercicio;
   @Column(name = "fechaInicio", nullable = false) private Date fechaInicio;
   @Column(name = "fechaFin", nullable = true) private Date fechaFin;  
   @Column(name = "fechaCreacion", nullable = true) private Date fechaCreacion = new Date();

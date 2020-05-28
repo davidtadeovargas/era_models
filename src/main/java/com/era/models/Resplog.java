@@ -18,8 +18,8 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "resplog",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Resplog {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="resplog_tip") @Column(name = "tip", nullable = false) private boolean tip;
-  @Column(name = "return", nullable = true) private int return_ = -1;
+  @Index(name="resplog_tip") @Column(name = "tip", nullable = false, columnDefinition = "boolean default false") private boolean tip;
+  @Column(name = "return", nullable = true, columnDefinition = "int default -1") private int return_ = -1;
   @Column(name = "pathdemysq", nullable = true, length = 2048) private String pathdemysq = "";
   @Column(name = "pathamysq", nullable = true, length = 2048) private String pathamysq = "";
   @Column(name = "pathde", nullable = true, length = 2048) private String pathde = "";

@@ -15,8 +15,8 @@ import javax.persistence.Table;
 
 @Entity @Table(name = "auxiliar") public class Auxiliar {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "venta", nullable = true) private int venta;
-  @Column(name = "partida", nullable = true) private int partida;
+  @Column(name = "venta", nullable = true, columnDefinition = "int default 0") private int venta;
+  @Column(name = "partida", nullable = true, columnDefinition = "int default 0") private int partida;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  

@@ -30,7 +30,7 @@ public class Sales {
     @Column(name = "noser", nullable = false, length = 30)
     private String noser;
     
-    @Column(name = "monedaID", nullable = false)
+    @Column(name = "monedaID", nullable = false, columnDefinition = "int default 0")
     private int coinID = 0;
     
     @Column(name = "vend", nullable = false, length = 30)
@@ -66,22 +66,22 @@ public class Sales {
     @Column(name = "formpag", nullable = false, length = 30)
     private String paymentForm = "";
     
-    @Column(name = "nocort", nullable = true)
+    @Column(name = "nocort", nullable = true, columnDefinition = "int default 0")
     private int cortNumber = 0;
     
-    @Column(name = "venta_origen", nullable = true)
+    @Column(name = "venta_origen", nullable = true, columnDefinition = "int default 0")
     private int originSale = 0;
     
-    @Column(name = "vtadevp", nullable = true)
+    @Column(name = "vtadevp", nullable = true, columnDefinition = "int default 0")
     private int saleParcialDevolution = 0;
     
-    @Column(name = "ptovta", nullable = true)
+    @Column(name = "ptovta", nullable = true, columnDefinition = "boolean default false")
     private boolean salesPoint = false;
     
     @Column(name = "catgral", nullable = true, length = 500)
     private String catgral = "";
     
-    @Column(name = "factu", nullable = true)
+    @Column(name = "factu", nullable = true, columnDefinition = "boolean default false")
     private boolean facturado = false;
     
     @Column(name = "tipcam", nullable = false)
@@ -150,7 +150,7 @@ public class Sales {
     @Column(name = "tot", nullable = false)
     private BigDecimal total;
     
-    @Column(name = "tic", nullable = false)
+    @Column(name = "tic", nullable = false, columnDefinition = "int default 0")
     private int ticket;
     
     @Column(name = "estad", nullable = false, length = 10)
@@ -162,7 +162,7 @@ public class Sales {
     @Column(name = "observ", nullable = false, length = 1000)
     private String observation;
     
-    @Column(name = "timbr", nullable = false)
+    @Column(name = "timbr", nullable = false, columnDefinition = "boolean default false")
     private boolean invoiced;
     
     @Column(name = "estac", nullable = false, length = 30)
@@ -198,10 +198,10 @@ public class Sales {
     @Column(name = "sector", nullable = false, length = 10)
     private String sector = "";
     
-    @Column(name = "id_tipodoc", nullable = false)
+    @Column(name = "id_tipodoc", nullable = false, columnDefinition = "int default 0")
     private int deliverEmail1 = 0;
     
-    @Column(name = "id_emp", nullable = true)
+    @Column(name = "id_emp", nullable = true, columnDefinition = "int default 0")
     private int companyID = 0;
     
     @Column(name = "cadori", nullable = true, length = 2000)

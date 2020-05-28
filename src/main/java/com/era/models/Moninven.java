@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @Entity @Table(name = "moninven") public class Moninven {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="prod") @Column(name = "prod", nullable = false,length = 255) private String prod;
-  @Column(name = "cant", nullable = true) private float cant;
+  @Column(name = "cant", nullable = true, columnDefinition = "float default 0") private float cant;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
   @Index(name="alma")  @Column(name = "alma", nullable = false,length = 30) private String alma;
   @Column(name = "unid", nullable = false,length = 30) private String unid;
@@ -30,7 +30,7 @@ import java.math.BigDecimal;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;
   @Column(name = "emp", nullable = false,length = 30) private String emp;
-  @Column(name = "entsal", nullable = false) private boolean entsal;
+  @Column(name = "entsal", nullable = false, columnDefinition = "boolean default false") private boolean entsal;
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "existenciainicial", nullable = true) private BigDecimal existenciainicial;
 @Column(name = "fmod", nullable = false) private Date fmod; 

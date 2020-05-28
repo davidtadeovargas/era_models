@@ -119,7 +119,7 @@ public class BasDats {
     @Column(name = "nocaj", nullable = false, length = 30)
     private String nocaj;
     
-    @Column(name = "test", nullable = true)
+    @Column(name = "test", nullable = true, columnDefinition = "boolean default false")
     private boolean test = false;
     
     @Column(name = "falt", nullable = true) private Date falt;

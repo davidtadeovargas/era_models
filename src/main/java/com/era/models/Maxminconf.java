@@ -18,7 +18,7 @@ import org.hibernate.annotations.Index;
 @Entity @Table(name = "maxminconf") public class Maxminconf {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;  
   @Index(name="estac") @Column(name = "estac", nullable = false,length = 30) private String estac;
-  @Column(name = "hrs", nullable = false) private int hrs;
+  @Column(name = "hrs", nullable = false, columnDefinition = "int default 0") private int hrs;
   @Column(name = "estacglo", nullable = false,length = 255) private String estacglo;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;

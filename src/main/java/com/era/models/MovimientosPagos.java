@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 
 @Entity@Table(name = "movimientos_pagos")public class MovimientosPagos {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Index(name="pago_id")  @Column(name = "pago_id", nullable = true) private int pago_id;  
+  @Index(name="pago_id")  @Column(name = "pago_id", nullable = true, columnDefinition = "int default 0") private int pago_id;  
   @Column(name = "serie", nullable = true) private String serie;
   @Column(name = "folio", nullable = true) private String folio;
   @Column(name = "subtotal", nullable = true) private BigDecimal subtotal;

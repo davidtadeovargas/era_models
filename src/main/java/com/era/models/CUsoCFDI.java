@@ -29,10 +29,10 @@ public class CUsoCFDI {
     @Column(name = "Descripcion", nullable = true, length = 255)
     private String description;
     
-    @Column(name = "Persona_Fisica", nullable = true)
+    @Column(name = "Persona_Fisica", nullable = true, columnDefinition = "boolean default false")
     private boolean Persona_Fisica;
     
-    @Column(name = "Persona_Moral", nullable = true)
+    @Column(name = "Persona_Moral", nullable = true, columnDefinition = "boolean default false")
     private boolean Persona_Moral;
     
     @Column(name = "Fecha_inicio_de_vigencia", nullable = true)

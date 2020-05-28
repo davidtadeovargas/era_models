@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity @Table(name = "datoscp") public class Datoscp {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Column(name = "vta", nullable = false) private int vta;
+  @Column(name = "vta", nullable = false, columnDefinition = "int default 0") private int vta;
   @Column(name = "remitente", nullable = true) private String remitente;
   @Column(name = "callerem", nullable = true) private String callerem;
   @Column(name = "noextrem", nullable = true) private String noextrem;

@@ -19,9 +19,9 @@ import java.math.BigDecimal;
 @Entity @Table(name = "costs",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Costs {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="costs_prod") @Column(name = "prod", nullable = false,length = 30) private String prod;
-  @Column(name = "cant", nullable = true) private float cant;
-  @Column(name = "cost", nullable = true) private float cost;  
-  @Column(name = "monedaID", nullable = false) private int monedaID;
+  @Column(name = "cant", nullable = true, columnDefinition = "float default 0") private float cant;
+  @Column(name = "cost", nullable = true, columnDefinition = "float default 0") private float cost;  
+  @Column(name = "monedaID", nullable = false, columnDefinition = "int default 0") private int monedaID;
   @Column(name = "tipcam", nullable = false) private BigDecimal tipcam;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;

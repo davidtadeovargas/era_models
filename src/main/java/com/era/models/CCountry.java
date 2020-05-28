@@ -49,7 +49,7 @@ public class CCountry {
    
     @Column(name = "sucu", nullable = false,length = 30) private String sucu;
     
-    @Column(name = "val", nullable = true)
+    @Column(name = "val", nullable = true, columnDefinition = "float default 0")
     private float value = 0;        
    
 

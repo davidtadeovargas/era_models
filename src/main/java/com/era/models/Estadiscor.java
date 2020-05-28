@@ -24,7 +24,7 @@ import javax.persistence.UniqueConstraint;
   @Column(name = "motiv", nullable = false,length = 500) private String motiv;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
-  @Column(name = "export", nullable = true) private boolean export = false;
+  @Column(name = "export", nullable = true, columnDefinition = "boolean default false") private boolean export = false;
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
   @Column(name = "fmod", nullable = false) private Date fmod;

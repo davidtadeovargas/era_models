@@ -15,15 +15,15 @@ import javax.persistence.Table;
 
 @Entity@Table(name = "asientos_contables")public class AsientosContables {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "idSerie", nullable = false) private int idSerie;  
+  @Column(name = "idSerie", nullable = false, columnDefinition = "int default 0") private int idSerie;  
   @Column(name = "nombre", nullable = false,length = 100) private String nombre;
   @Column(name = "documento", nullable = false,length = 60) private String documento;
   @Column(name = "frecuencia", nullable = false,length = 45) private String frecuencia;
   @Column(name = "concepto", nullable = false,length = 100) private String concepto;
-  @Column(name = "tipo", nullable = false) private int tipo;  
+  @Column(name = "tipo", nullable = false, columnDefinition = "int default 0") private int tipo;  
   @Column(name = "fecha_alta", nullable = false) private Date fecha_alta = new Date();
   @Column(name = "fecha_modificacion", nullable = false) private Date fecha_modificacion = new Date();    
-  @Column(name = "idSeriePago", nullable = true) private int idSeriePago = 0;
+  @Column(name = "idSeriePago", nullable = true, columnDefinition = "int default 0") private int idSeriePago = 0;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  

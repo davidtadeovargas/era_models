@@ -17,7 +17,7 @@ import javax.persistence.UniqueConstraint;
 @Entity @Table(name = "cortes",uniqueConstraints = {@UniqueConstraint( columnNames ={"dia","hora"})}) public class Cortes {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "idCorte", nullable = false) private int id;
   @Column(name = "dia", nullable = true, length = 30) private Date dia;  
-  @Column(name = "hora", nullable = true) private int hora;
+  @Column(name = "hora", nullable = true, columnDefinition = "int default 0") private int hora;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  

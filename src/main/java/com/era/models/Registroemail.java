@@ -21,7 +21,7 @@ import javax.persistence.Table;
   @Column(name = "contra", nullable = false,length = 100) private String contra;
   @Column(name = "generada_fecha", nullable = false) private Date generada_fecha;
   @Column(name = "cambiada_fecha", nullable = false) private Date cambiada_fecha = new Date();
-  @Column(name = "ya_entro_booleano", nullable = false) private int ya_entro_booleano;  
+  @Column(name = "ya_entro_booleano", nullable = false, columnDefinition = "int default 0") private int ya_entro_booleano;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  

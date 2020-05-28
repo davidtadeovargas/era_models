@@ -32,7 +32,7 @@ public class CCoin {
     @Column(name = "Decimales", nullable = true, length = 5)
     private String decimals;
     
-    @Column(name = "Porcentaje_variación", nullable = false, length = 11)
+    @Column(name = "Porcentaje_variación", nullable = false, length = 11, columnDefinition = "int default 0")
     private int variationPorcent;
     
     @Column(name = "Fecha_inicio_de_vigencia", nullable = false)

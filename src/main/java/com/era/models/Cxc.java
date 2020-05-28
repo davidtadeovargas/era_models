@@ -37,15 +37,15 @@ import java.math.BigDecimal;
   @Column(name = "fdoc", nullable = false) private Date fdoc = new Date();
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "fmod", nullable = false) private Date fmod;
-  @Column(name = "fol", nullable = true) private int fol = 0;  
+  @Column(name = "fol", nullable = true, columnDefinition = "int default 0") private int fol = 0;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;
   @Column(name = "cuentabanco", nullable = true, length = 30) private String cuentabanco = "";
   @Column(name = "estado", nullable = true, length = 30) private String estado = "";
-  @Column(name = "venta_origen", nullable = true) private int venta_origen = 0;
-  @Index(name="cxc_id_venta") @Column(name = "id_venta", nullable = false) private int id_venta;  
-  @Column(name = "monedaID", nullable = false) private int monedaID = 0;  
+  @Column(name = "venta_origen", nullable = true, columnDefinition = "int default 0") private int venta_origen = 0;
+  @Index(name="cxc_id_venta") @Column(name = "id_venta", nullable = false, columnDefinition = "int default 0") private int id_venta;  
+  @Column(name = "monedaID", nullable = false, columnDefinition = "int default 0") private int monedaID = 0;  
   @Column(name = "tipcam", nullable = true) private BigDecimal tipcam = BigDecimal.ZERO;
 
     public int getId() {

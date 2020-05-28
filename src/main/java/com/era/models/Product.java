@@ -69,7 +69,7 @@ public class Product {
     @Column(name = "tip", length = 30)
     private String tip = "";
     
-    @Column(name = "solmaxmin", length = 11)
+    @Column(name = "solmaxmin", length = 11, columnDefinition = "int default 0")
     private int askMaxMin = 1;
     
     @Column(name = "marc", length = 30)
@@ -87,7 +87,7 @@ public class Product {
     @Column(name = "colo", length = 30)
     private String color = "";
                         
-    @Column(name = "solser")
+    @Column(name = "solser", columnDefinition = "boolean default false")
     private boolean askSerie = false;
     
     @Column(name = "codext", length = 30)
@@ -108,79 +108,79 @@ public class Product {
     @Column(name = "pes", length = 30)
     private String weight = "";
     
-    @Column(name = "pesman")
+    @Column(name = "pesman", columnDefinition = "float default 0")
     private float weightMan = 0;
     
-    @Column(name = "prelist1")
+    @Column(name = "prelist1", columnDefinition = "float default 0")
     private float priceList1 = 0;
     
-    @Column(name = "prelist2")
+    @Column(name = "prelist2", columnDefinition = "float default 0")
     private float priceList2 = 0;
                 
-    @Column(name = "prelist3")
+    @Column(name = "prelist3", columnDefinition = "float default 0")
     private float priceList3 = 0;
     
-    @Column(name = "prelist4")
+    @Column(name = "prelist4", columnDefinition = "float default 0")
     private float priceList4 = 0;
     
-    @Column(name = "prelist5")
+    @Column(name = "prelist5", columnDefinition = "float default 0")
     private float priceList5 = 0;
     
-    @Column(name = "prelist6")
+    @Column(name = "prelist6", columnDefinition = "float default 0")
     private float priceList6 = 0;
     
-    @Column(name = "prelist7")
+    @Column(name = "prelist7", columnDefinition = "float default 0")
     private float priceList7 = 0;
     
-    @Column(name = "prelist8")
+    @Column(name = "prelist8", columnDefinition = "float default 0")
     private float priceList8 = 0;
     
-    @Column(name = "prelist9")
+    @Column(name = "prelist9", columnDefinition = "float default 0")
     private float priceList9 = 0;
     
-    @Column(name = "prelist10")
+    @Column(name = "prelist10", columnDefinition = "float default 0")
     private float priceList10 = 0;
     
-    @Column(name = "utilvta1")
+    @Column(name = "utilvta1", columnDefinition = "float default 0")
     private float utilSales1 = 0;
     
-    @Column(name = "utilvta2")
+    @Column(name = "utilvta2", columnDefinition = "float default 0")
     private float utilSales2 = 0;
     
-    @Column(name = "utilvta3")
+    @Column(name = "utilvta3", columnDefinition = "float default 0")
     private float utilSales3 = 0;
     
-    @Column(name = "utilvta4")
+    @Column(name = "utilvta4", columnDefinition = "float default 0")
     private float utilSales4 = 0;
     
-    @Column(name = "utilvta5")
+    @Column(name = "utilvta5", columnDefinition = "float default 0")
     private float utilSales5 = 0;
     
-    @Column(name = "utilvta6")
+    @Column(name = "utilvta6", columnDefinition = "float default 0")
     private float utilSales6 = 0;
     
-    @Column(name = "utilvta7")
+    @Column(name = "utilvta7", columnDefinition = "float default 0")
     private float utilSales7 = 0;
     
-    @Column(name = "utilvta8")
+    @Column(name = "utilvta8", columnDefinition = "float default 0")
     private float utilSales8 = 0;
     
-    @Column(name = "utilvta9")
+    @Column(name = "utilvta9", columnDefinition = "float default 0")
     private float utilSales9 = 0;
     
-    @Column(name = "utilvta10")
+    @Column(name = "utilvta10", columnDefinition = "float default 0")
     private float utilSales10 = 0;        
     
-    @Column(name = "med")
+    @Column(name = "med", columnDefinition = "float default 0")
     private float measure = 0;
     
-    @Column(name = "cost")
+    @Column(name = "cost", columnDefinition = "float default 0")
     private float cost = 0;
     
-    @Column(name = "costre")
+    @Column(name = "costre", columnDefinition = "float default 0")
     private float recolectionCost = 0;
     
-    @Column(name = "exist")
+    @Column(name = "exist", columnDefinition = "float default 0")
     private float existence = 0;
             
     @Column(name = "unid", length = 30)
@@ -201,22 +201,22 @@ public class Product {
     @Column(name = "infor", length = 255)
     private String information = "";
                     
-    @Column(name = "min", length = 11)
+    @Column(name = "min", length = 11, columnDefinition = "int default 0")
     private int minimun = 1;
     
-    @Column(name = "max", length = 11)
+    @Column(name = "max", length = 11, columnDefinition = "int default 0")
     private int maximum = 1;
     
-    @Column(name = "bajcost", length = 11)
+    @Column(name = "bajcost", length = 11, columnDefinition = "int default 0")
     private int lowerCost = 0;
     
-    @Column(name = "esvta", length = 11)
+    @Column(name = "esvta", length = 11, columnDefinition = "int default 0")
     private int isForSale = 0;
     
-    @Column(name = "compue", length = 11)
+    @Column(name = "compue", length = 11, columnDefinition = "int default 0")
     private int compound = 0;
     
-    @Column(name = "invent", length = 11)
+    @Column(name = "invent", length = 11, columnDefinition = "int default 0")
     private int iventory = 1;
     
     @Column(name = "estac", nullable = false, length = 30)
@@ -237,13 +237,13 @@ public class Product {
     @Column(name = "pedimen", length = 30)
     private String pediment = "";
                
-    @Column(name = "servi")
+    @Column(name = "servi", columnDefinition = "boolean default false")
     private boolean service = false;
     
-    @Column(name = "lotped")
+    @Column(name = "lotped", columnDefinition = "boolean default false")
     private boolean lotPediment = false;
     
-    @Column(name = "export")
+    @Column(name = "export", columnDefinition = "boolean default false")
     private boolean export = false;
             
     @Column(name = "fcadu")
@@ -258,40 +258,40 @@ public class Product {
     @Column(name = "clavesat", nullable = false, length = 25)
     private String keySAT;                
     
-    @Column(name = "provprincipal", length = 1)
+    @Column(name = "provprincipal", length = 1, columnDefinition = "int default 0")
     private int principalProvider = 0;
     
-    @Column(name = "id_garan", length = 1)
+    @Column(name = "id_garan", length = 1, columnDefinition = "int default 0")
     private int warrantyID = 0;
     
-    @Column(name = "id_lin", length = 1)
+    @Column(name = "id_lin", length = 1, columnDefinition = "int default 0")
     private int lineID = 0;
     
-    @Column(name = "id_tip", length = 1)
+    @Column(name = "id_tip", length = 1, columnDefinition = "int default 0")
     private int typeID = 0;
     
-    @Column(name = "id_marc", length = 1)
+    @Column(name = "id_marc", length = 1, columnDefinition = "int default 0")
     private int brandID = 0;
     
-    @Column(name = "id_mode", length = 1)
+    @Column(name = "id_mode", length = 1, columnDefinition = "int default 0")
     private int modelID = 0;
     
-    @Column(name = "id_fab", length = 1)
+    @Column(name = "id_fab", length = 1, columnDefinition = "int default 0")
     private int makerID = 0;
     
-    @Column(name = "id_colo", length = 1)
+    @Column(name = "id_colo", length = 1, columnDefinition = "int default 0")
     private int colorID = 0;
     
-    @Column(name = "id_pes", length = 1)
+    @Column(name = "id_pes", length = 1, columnDefinition = "int default 0")
     private int weightID = 0;
     
-    @Column(name = "id_unid", length = 1)
+    @Column(name = "id_unid", length = 1, columnDefinition = "int default 0")
     private int unitID = 0;
     
-    @Column(name = "id_lug", length = 1)
+    @Column(name = "id_lug", length = 1, columnDefinition = "int default 0")
     private int placeID = 0;
     
-    @Column(name = "id_alma", length = 1)
+    @Column(name = "id_alma", length = 1, columnDefinition = "int default 0")
     private int warehouseID = 0;
 
     public int getId() {

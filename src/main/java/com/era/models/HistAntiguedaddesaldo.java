@@ -19,7 +19,7 @@ import javax.persistence.Id;
 @Entity@Table(name = "hist_antiguedaddesaldo")public class HistAntiguedaddesaldo {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "idCorte", nullable = false) private int idCorte;
+  @Column(name = "idCorte", nullable = false, columnDefinition = "int default 0") private int idCorte;
   
   @Index(name="hist_antiguedaddesaldo_nom") @Column(name = "nom", nullable = false,length = 255) private String nom = "";
   @Index(name="hist_antiguedaddesaldo_codemp") @Column(name = "codemp", nullable = false,length = 30) private String codemp = "";  

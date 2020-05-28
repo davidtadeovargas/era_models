@@ -17,8 +17,8 @@ import javax.persistence.Table;
 
 @Entity @Table(name = "usuarioserie") public class Usuarioserie {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-  @Column(name = "idusuario", nullable = true) private int idusuario;
-  @Column(name = "idserie", nullable = true) private int idserie;  
+  @Column(name = "idusuario", nullable = true, columnDefinition = "int default 0") private int idusuario;
+  @Column(name = "idserie", nullable = true, columnDefinition = "int default 0") private int idserie;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  

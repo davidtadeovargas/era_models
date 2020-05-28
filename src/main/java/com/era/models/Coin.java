@@ -26,7 +26,7 @@ public class Coin {
     @Column(name = "mon", nullable = false, length = 30)
     private String code = "";
     
-    @Column(name = "val", nullable = true)
+    @Column(name = "val", nullable = true, columnDefinition = "float default 0")
     private float value = 0;
     
     @Column(name = "mondescrip", nullable = false, length = 255)
@@ -47,7 +47,7 @@ public class Coin {
     @Column(name = "nocaj", nullable = false, length = 30)
     private String cashNumber = "";
     
-    @Column(name = "mn", nullable = true)
+    @Column(name = "mn", nullable = true, columnDefinition = "boolean default false")
     private boolean national = false;
 
        @Column(name = "falt", nullable = true) private Date falt;

@@ -40,7 +40,7 @@ public class User {
     @Column(name = "estac", nullable = false, length = 30)
     private String estac = "";
     
-    @Column(name = "52m", nullable = false)
+    @Column(name = "52m", nullable = false, columnDefinition = "boolean default false")
     private boolean m52 = false;
     
     @Column(name = "sucu", nullable = false, length = 30)

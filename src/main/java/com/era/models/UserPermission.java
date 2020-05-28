@@ -23,319 +23,319 @@ public class UserPermission {
     @Column(name = "PKId", nullable = false)
     private int id;
     
-    @Column(name = "FKIdUsuario", nullable = false)
+    @Column(name = "FKIdUsuario", nullable = false, columnDefinition = "int default 0")
     private int userID;
     
-    @Column(name = "permisoConf", nullable = false)
+    @Column(name = "permisoConf", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoConf = true;
     
-    @Column(name = "permisoCorreos", nullable = false)
+    @Column(name = "permisoCorreos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCorreos = true;
     
-    @Column(name = "permisoDatosEmpresa", nullable = false)
+    @Column(name = "permisoDatosEmpresa", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoDatosEmpresa = true;
     
-    @Column(name = "permisoSeries", nullable = false)
+    @Column(name = "permisoSeries", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoSeries = true;
     
-    @Column(name = "permisoImpresoras", nullable = false)
+    @Column(name = "permisoImpresoras", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoImpresoras = true;
     
-    @Column(name = "permisoCambiarIcono", nullable = false)
+    @Column(name = "permisoCambiarIcono", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCambiarIcono = true;
     
-    @Column(name = "permisoConfiguracionesGenerales", nullable = false)
+    @Column(name = "permisoConfiguracionesGenerales", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoConfiguracionesGenerales = true;
     
-    @Column(name = "otorgaPermisosConfig", nullable = false)
+    @Column(name = "otorgaPermisosConfig", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosConfig = true;
     
-    @Column(name = "permisoUsuarios", nullable = false)
+    @Column(name = "permisoUsuarios", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoUsuarios = true;
     
-    @Column(name = "permisoUsuariosDefinir", nullable = false)
+    @Column(name = "permisoUsuariosDefinir", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoUsuariosDefinir = true;
     
-    @Column(name = "permisoUsuariosConectados", nullable = false)
+    @Column(name = "permisoUsuariosConectados", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoUsuariosConectados = true;
     
-    @Column(name = "permisoUsuariosPermisos", nullable = false)
+    @Column(name = "permisoUsuariosPermisos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoUsuariosPermisos = true;
     
-    @Column(name = "permisoClaves", nullable = false)
+    @Column(name = "permisoClaves", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClaves = true;
     
-    @Column(name = "permisoReparar", nullable = false)
+    @Column(name = "permisoReparar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReparar = true;
     
-    @Column(name = "permisoRepararErrores", nullable = false)
+    @Column(name = "permisoRepararErrores", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoRepararErrores = true;
     
-    @Column(name = "permisoRepararRestaurar", nullable = false)
+    @Column(name = "permisoRepararRestaurar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoRepararRestaurar = true;
     
-    @Column(name = "permisoBaseDatos", nullable = false)
+    @Column(name = "permisoBaseDatos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoBaseDatos = true;
     
-    @Column(name = "permisoBaseDatosConexiones", nullable = false)
+    @Column(name = "permisoBaseDatosConexiones", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoBaseDatosConexiones = true;
     
-    @Column(name = "permisoBaseDatosArchivo", nullable = false)
+    @Column(name = "permisoBaseDatosArchivo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoBaseDatosArchivo = true;
     
-    @Column(name = "permisoReportes", nullable = false)
+    @Column(name = "permisoReportes", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReportes = true;
     
-    @Column(name = "permisoReportesUsuarios", nullable = false)
+    @Column(name = "permisoReportesUsuarios", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReportesUsuarios = true;
     
-    @Column(name = "permisoReportesRespaldos", nullable = false)
+    @Column(name = "permisoReportesRespaldos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReportesRespaldos = true;
     
-    @Column(name = "permisoReportesLog", nullable = false)
+    @Column(name = "permisoReportesLog", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReportesLog = true;
     
-    @Column(name = "permisoReportesEstadistica", nullable = false)
+    @Column(name = "permisoReportesEstadistica", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoReportesEstadistica = true;
     
-    @Column(name = "permisoRevocacion", nullable = false)
+    @Column(name = "permisoRevocacion", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoRevocacion = true;
     
-    @Column(name = "permisoActivarSistema", nullable = false)
+    @Column(name = "permisoActivarSistema", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoActivarSistema = true;
     
-    @Column(name = "otorgaPermisosSistema", nullable = false)
+    @Column(name = "otorgaPermisosSistema", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosSistema = true;
     
-    @Column(name = "permisoContabilidad", nullable = false)
+    @Column(name = "permisoContabilidad", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoContabilidad = true;
     
-    @Column(name = "permisoConceptosNC", nullable = false)
+    @Column(name = "permisoConceptosNC", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoConceptosNC = true;
     
-    @Column(name = "permisoCatalogoGarantias", nullable = false)
+    @Column(name = "permisoCatalogoGarantias", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCatalogoGarantias = true;
     
-    @Column(name = "permisoZonas", nullable = false)
+    @Column(name = "permisoZonas", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoZonas = true;
     
-    @Column(name = "permisoGiros", nullable = false)
+    @Column(name = "permisoGiros", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoGiros = true;
     
-    @Column(name = "permisoMonedas", nullable = false)
+    @Column(name = "permisoMonedas", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoMonedas = true;
     
-    @Column(name = "permisoImpuestos", nullable = false)
+    @Column(name = "permisoImpuestos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoImpuestos = true;
     
-    @Column(name = "otorgaPermisosModulos", nullable = false)
+    @Column(name = "otorgaPermisosModulos", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosModulos = true;
     
-    @Column(name = "permisoCompras", nullable = false)
+    @Column(name = "permisoCompras", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCompras = true;
     
-    @Column(name = "permisoComprasCancelar", nullable = false)
+    @Column(name = "permisoComprasCancelar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasCancelar = true;
     
-    @Column(name = "permisoComprasDevolucion", nullable = false)
+    @Column(name = "permisoComprasDevolucion", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasDevolucion = true;
     
-    @Column(name = "permisoComprasParcial", nullable = false)
+    @Column(name = "permisoComprasParcial", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasParcial = true;
     
-    @Column(name = "permisoComprasNuevo", nullable = false)
+    @Column(name = "permisoComprasNuevo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasNuevo = true;
     
-    @Column(name = "permisoComprasNotCredito", nullable = false)
+    @Column(name = "permisoComprasNotCredito", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasNotCredito = true;
     
-    @Column(name = "permisoComprasVer", nullable = false)
+    @Column(name = "permisoComprasVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasVer = true;
     
-    @Column(name = "permisoComprasCargarArchivo", nullable = false)
+    @Column(name = "permisoComprasCargarArchivo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasCargarArchivo = true;
     
-    @Column(name = "permisoComprasBorrarArchivo", nullable = false)
+    @Column(name = "permisoComprasBorrarArchivo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasBorrarArchivo = true;
     
-    @Column(name = "permisoComprasRecibirOrden", nullable = false)
+    @Column(name = "permisoComprasRecibirOrden", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoComprasRecibirOrden = true;
     
-    @Column(name = "otorgaPermisosCompras", nullable = false)
+    @Column(name = "otorgaPermisosCompras", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosCompras = true;
     
-    @Column(name = "permisoProvee", nullable = false)
+    @Column(name = "permisoProvee", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProvee = true;
     
-    @Column(name = "permisoProveeNuevo", nullable = false)
+    @Column(name = "permisoProveeNuevo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProveeNuevo = true;
     
-    @Column(name = "permisoProveeModificar", nullable = false)
+    @Column(name = "permisoProveeModificar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProveeModificar = true;
     
-    @Column(name = "permisoProveeVer", nullable = false)
+    @Column(name = "permisoProveeVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProveeVer = true;
     
-    @Column(name = "permisoProveeBorrar", nullable = false)
+    @Column(name = "permisoProveeBorrar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProveeBorrar = true;
     
-    @Column(name = "otorgaPermisosProvee", nullable = false)
+    @Column(name = "otorgaPermisosProvee", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosProvee = true;
     
-    @Column(name = "permisoPrevio", nullable = false)
+    @Column(name = "permisoPrevio", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevio = true;
     
-    @Column(name = "permisoPrevioNueva", nullable = false)
+    @Column(name = "permisoPrevioNueva", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioNueva = true;
     
-    @Column(name = "permisoPrevioAbrir", nullable = false)
+    @Column(name = "permisoPrevioAbrir", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioAbrir = true;
     
-    @Column(name = "permisoPrevioVer", nullable = false)
+    @Column(name = "permisoPrevioVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioVer = true;
     
-    @Column(name = "permisoPrevioCancelar", nullable = false)
+    @Column(name = "permisoPrevioCancelar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioCancelar = true;
     
-    @Column(name = "permisoPrevioSeries", nullable = false)
+    @Column(name = "permisoPrevioSeries", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioSeries = true;
     
-    @Column(name = "permisoPrevioCompra", nullable = false)
+    @Column(name = "permisoPrevioCompra", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPrevioCompra = true;
     
-    @Column(name = "otorgaPermisosPrevio", nullable = false)
+    @Column(name = "otorgaPermisosPrevio", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosPrevio = true;
     
-    @Column(name = "permisoInventario", nullable = false)
+    @Column(name = "permisoInventario", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoInventario = true;
     
-    @Column(name = "permisoProductos", nullable = false)
+    @Column(name = "permisoProductos", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProductos = true;
     
-    @Column(name = "permisoProductosNuevo", nullable = false)
+    @Column(name = "permisoProductosNuevo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProductosNuevo = true;
     
-    @Column(name = "permisoProductosModificar", nullable = false)
+    @Column(name = "permisoProductosModificar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoProductosModificar = true;
         
-    @Column(name = "permisProductosBorrar", nullable = false)
+    @Column(name = "permisProductosBorrar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisProductosBorrar = true;
     
-    @Column(name = "otorgaPermisosInventario", nullable = false)
+    @Column(name = "otorgaPermisosInventario", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosInventario = true;
     
-    @Column(name = "permisoClientes", nullable = false)
+    @Column(name = "permisoClientes", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientes = true;
         
-    @Column(name = "permisoClientesNuevo", nullable = false)
+    @Column(name = "permisoClientesNuevo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientesNuevo = true;
     
-    @Column(name = "permisoClientesModificar", nullable = false)
+    @Column(name = "permisoClientesModificar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientesModificar = true;
     
-    @Column(name = "permisoClientesVer", nullable = false)
+    @Column(name = "permisoClientesVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientesVer = true;
     
-    @Column(name = "permisoClientesBorrar", nullable = false)
+    @Column(name = "permisoClientesBorrar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientesBorrar = true;
     
-    @Column(name = "permisoClientesEnviar", nullable = false)
+    @Column(name = "permisoClientesEnviar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoClientesEnviar = true;
     
-    @Column(name = "otorgaPermisosClientes", nullable = false)
+    @Column(name = "otorgaPermisosClientes", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosClientes = true;
     
-    @Column(name = "permisoVentas", nullable = false)
+    @Column(name = "permisoVentas", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentas = true;
     
-    @Column(name = "permisoVentasCancelar", nullable = false)
+    @Column(name = "permisoVentasCancelar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasCancelar = true;
     
-    @Column(name = "permisoVentasDevolucion", nullable = false)
+    @Column(name = "permisoVentasDevolucion", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasDevolucion = true;
     
-    @Column(name = "permisoVentasParcial", nullable = false)
+    @Column(name = "permisoVentasParcial", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasParcial = true;
     
-    @Column(name = "permisoVentasNueva", nullable = false)
+    @Column(name = "permisoVentasNueva", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasNueva = true;
     
-    @Column(name = "permisoVentasNotCredito", nullable = false)
+    @Column(name = "permisoVentasNotCredito", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasNotCredito = true;
     
-    @Column(name = "permisoVentasVer", nullable = false)
+    @Column(name = "permisoVentasVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasVer = true;
     
-    @Column(name = "permisoVentasEnviar", nullable = false)
+    @Column(name = "permisoVentasEnviar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasEnviar = true;
     
-    @Column(name = "permisoVentasTimbrar", nullable = false)
+    @Column(name = "permisoVentasTimbrar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasTimbrar = true;
     
-    @Column(name = "permisoVentasEntregar", nullable = false)
+    @Column(name = "permisoVentasEntregar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasEntregar = true;
     
-    @Column(name = "permisoVentasComprobar", nullable = false)
+    @Column(name = "permisoVentasComprobar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasComprobar = true;
     
-    @Column(name = "permisoVentasAcuse", nullable = false)
+    @Column(name = "permisoVentasAcuse", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasAcuse = true;
     
-    @Column(name = "permisoVentasObtenerXml", nullable = false)
+    @Column(name = "permisoVentasObtenerXml", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasObtenerXml = true;
     
-    @Column(name = "permisoVentasFacturar", nullable = false)
+    @Column(name = "permisoVentasFacturar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasFacturar = true;
     
-    @Column(name = "permisoVentasCargarArchivo", nullable = false)
+    @Column(name = "permisoVentasCargarArchivo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasCargarArchivo = true;
     
-    @Column(name = "permisoVentasBorrarArchivo", nullable = false)
+    @Column(name = "permisoVentasBorrarArchivo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoVentasBorrarArchivo = true;
     
-    @Column(name = "otorgaPermisosVentas", nullable = false)
+    @Column(name = "otorgaPermisosVentas", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosVentas = true;
     
-    @Column(name = "permisoCotiza", nullable = false)
+    @Column(name = "permisoCotiza", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotiza = true;
     
-    @Column(name = "permisoCotizaNueva", nullable = false)
+    @Column(name = "permisoCotizaNueva", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaNueva = true;
     
-    @Column(name = "permisoCotizaAbrir", nullable = false)
+    @Column(name = "permisoCotizaAbrir", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaAbrir = true;
     
-    @Column(name = "permisoCotizaVer", nullable = false)
+    @Column(name = "permisoCotizaVer", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaVer = true;
     
-    @Column(name = "permisoCotizaCancelar", nullable = false)
+    @Column(name = "permisoCotizaCancelar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaCancelar = true;
     
-    @Column(name = "permisoCotizaReenviar", nullable = false)
+    @Column(name = "permisoCotizaReenviar", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaReenviar = true;
     
-    @Column(name = "permisoCotizaVenta", nullable = false)
+    @Column(name = "permisoCotizaVenta", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCotizaVenta = true;
     
-    @Column(name = "otorgaPermisosCotiza", nullable = false)
+    @Column(name = "otorgaPermisosCotiza", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisosCotiza = true;
     
-    @Column(name = "permisoCxc", nullable = false)
+    @Column(name = "permisoCxc", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCxc = true;
     
-    @Column(name = "permisoPagoNuevo", nullable = false)
+    @Column(name = "permisoPagoNuevo", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoPagoNuevo = true;
     
-    @Column(name = "permisoCancelarPago", nullable = false)
+    @Column(name = "permisoCancelarPago", nullable = false, columnDefinition = "boolean default true")
     private boolean permisoCancelarPago = true;
     
-    @Column(name = "otorgaPermisoCxc", nullable = false)
+    @Column(name = "otorgaPermisoCxc", nullable = false, columnDefinition = "boolean default true")
     private boolean otorgaPermisoCxc = true;
     
-    @Column(name = "permisProductosListaPrecio", nullable = false)
+    @Column(name = "permisProductosListaPrecio", nullable = false, columnDefinition = "boolean default true")
     private boolean permisProductosListaPrecio = true;
     
-    @Column(name = "permisProductosCargadoImagen", nullable = false)
+    @Column(name = "permisProductosCargadoImagen", nullable = false, columnDefinition = "boolean default true")
     private boolean permisProductosCargadoImagen = true;
 
         @Column(name = "estac", nullable = false,length = 30) private String estac;

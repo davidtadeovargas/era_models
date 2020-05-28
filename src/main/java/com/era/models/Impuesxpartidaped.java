@@ -17,12 +17,12 @@ import java.math.BigDecimal;
 
 @Entity @Table(name = "impuesxpartidaped") public class Impuesxpartidaped {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Column(name = "idParts", nullable = false) private int idParts;
-  @Column(name = "idPartida", nullable = false) private int idPartida;
+  @Column(name = "idParts", nullable = false, columnDefinition = "int default 0") private int idParts;
+  @Column(name = "idPartida", nullable = false, columnDefinition = "int default 0") private int idPartida;
   @Column(name = "ret_tras", nullable = false, length = 3) private String ret_tras; 
   @Column(name = "codigoImpuesto", nullable = false,length = 30) private String codigoImpuesto;
   @Column(name = "total", nullable = false) private BigDecimal total;
-  @Column(name = "retencion", nullable = false) private int retencion;
+  @Column(name = "retencion", nullable = false, columnDefinition = "int default 0") private int retencion;
   @Column(name = "tasa", nullable = false) private BigDecimal tasa;  
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "fmod", nullable = false) private Date fmod;

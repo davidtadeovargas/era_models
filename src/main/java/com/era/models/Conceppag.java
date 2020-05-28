@@ -16,7 +16,7 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "conceppag",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Conceppag {
-  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false, columnDefinition = "int default 0") private int id;
   @Index(name="conceppag_concep") @Column(name = "concep", nullable = false,length = 30) private String concep;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
