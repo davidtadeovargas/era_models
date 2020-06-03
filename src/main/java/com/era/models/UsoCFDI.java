@@ -23,7 +23,7 @@ public class UsoCFDI {
     @Column(name = "c_usocfdi_id", nullable = false)
     private int id;
     
-    @Column(name = "c_UsoCFDI", nullable = true, length = 5)
+    @Column(name = "code", nullable = true, length = 5)
     private String code = "";
     
     @Column(name = "Descripcion", nullable = true, length = 255)

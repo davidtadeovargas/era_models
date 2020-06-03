@@ -17,7 +17,7 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "tipscamb") public class Tipscamb {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="mon") @Column(name = "mon", nullable = false,length = 30) private String mon;
+  @Index(name="code") @Column(name = "code", nullable = false,length = 30) private String code;
   @Column(name = "tipcam", nullable = true, columnDefinition = "float default 0") private float tipcam;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -33,12 +33,12 @@ import org.hibernate.annotations.Index;
         this.id = id;
     }
 
-    public String getMon() {
-        return mon;
+    public String getCode() {
+        return code;
     }
 
-    public void setMon(String mon) {
-        this.mon = mon;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public float getTipcam() {
@@ -89,6 +89,5 @@ import org.hibernate.annotations.Index;
         this.fmod = fmod;
     }
 
-  
-  
+      
 }

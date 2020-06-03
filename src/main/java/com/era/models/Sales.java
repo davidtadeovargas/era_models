@@ -166,22 +166,22 @@ public class Sales {
     private boolean invoiced;
     
     @Column(name = "estac", nullable = false, length = 30)
-    private String station;
+    private String estac;
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal;
+    private String sucu;
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber;
+    private String nocaj;
     
     @Column(name = "fvenc", nullable = true)
-    private Date vencimientDate = new Date();
+    private Date fvenc = new Date();
     
     @Column(name = "falt", nullable = true)
-    private Date creationDate;
+    private Date falt;
     
     @Column(name = "fmod", nullable = false)
-    private Date editedDate;
+    private Date fmod;
     
     @Column(name = "usocfdi", nullable = false, length = 5)
     private String usocfdi;
@@ -594,52 +594,52 @@ public class Sales {
         this.invoiced = invoiced;
     }
 
-    public String getStation() {
-        return station;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setStation(String station) {
-        this.station = station;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
-    public Date getVencimientDate() {
-        return vencimientDate;
+    public Date getFvenc() {
+        return fvenc;
     }
 
-    public void setVencimientDate(Date vencimientDate) {
-        this.vencimientDate = vencimientDate;
+    public void setFvenc(Date fvenc) {
+        this.fvenc = fvenc;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Date getFalt() {
+        return falt;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setFalt(Date falt) {
+        this.falt = falt;
     }
 
-    public Date getEditedDate() {
-        return editedDate;
+    public Date getFmod() {
+        return fmod;
     }
 
-    public void setEditedDate(Date editedDate) {
-        this.editedDate = editedDate;
+    public void setFmod(Date fmod) {
+        this.fmod = fmod;
     }
 
     public String getUsocfdi() {
@@ -713,6 +713,7 @@ public class Sales {
     public void setReference(String reference) {
         this.reference = reference;
     }
+
 
     
 }

@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 
 @Entity @Table(name = "traspas") public class Traspas {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="prod")  @Column(name = "prod", nullable = false,length = 255) private String prod;
+  @Index(name="code")  @Column(name = "code", nullable = false,length = 255) private String code;
   @Index(name="alma") @Column(name = "alma", nullable = false,length = 255) private String alma;
   @Column(name = "concep", nullable = false,length = 50) private String concep;
   @Column(name = "unid", nullable = false,length = 30) private String unid;
@@ -45,12 +45,12 @@ import java.math.BigDecimal;
         this.id = id;
     }
 
-    public String getProd() {
-        return prod;
+    public String getCode() {
+        return code;
     }
 
-    public void setProd(String prod) {
-        this.prod = prod;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getAlma() {
@@ -188,7 +188,7 @@ import java.math.BigDecimal;
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-  
-                
+
+                    
            
 }

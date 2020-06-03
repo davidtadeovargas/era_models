@@ -23,20 +23,20 @@ public class Payment {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "cod", nullable = false, length = 30)
+    @Column(name = "code", nullable = false, length = 30)
     private String code = "";
     
     @Column(name = "descrip", nullable = true, length = 255)
     private String description;
     
     @Column(name = "estac", nullable = false, length = 30)
-    private String station = "";
+    private String estac = "";
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal = "";
+    private String sucu = "";
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber = "";
+    private String nocaj = "";
 
         
     @Column(name = "falt", nullable = true) private Date falt;
@@ -66,28 +66,28 @@ public class Payment {
         this.description = description;
     }
 
-    public String getStation() {
-        return station;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setStation(String station) {
-        this.station = station;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public Date getFalt() {
@@ -106,6 +106,6 @@ public class Payment {
         this.fmod = fmod;
     }
 
-
+    
 
 }

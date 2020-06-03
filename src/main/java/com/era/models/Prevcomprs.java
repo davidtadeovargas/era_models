@@ -18,7 +18,7 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "prevcomprs",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Prevcomprs {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="prevcomprs_codprevcomp") @Column(name = "codprevcomp", nullable = false,length = 30) private String codprevcomp;
+  @Index(name="prevcomprs_codprevcomp") @Column(name = "code", nullable = false,length = 30) private String code;
   @Column(name = "motiv", nullable = false,length = 255) private String motiv;
   @Column(name = "noser", nullable = false,length = 30) private String noser;
   @Column(name = "nodoc", nullable = true, length = 30) private String nodoc = "";
@@ -53,13 +53,13 @@ import org.hibernate.annotations.Index;
         this.id = id;
     }
 
-    public String getCodprevcomp() {
-        return codprevcomp;
+    public String getCode() {
+        return code;
     }
 
-    public void setCodprevcomp(String codprevcomp) {
-        this.codprevcomp = codprevcomp;
-    }
+    public void setCode(String code) {
+        this.code = code;
+    }    
 
     public String getMotiv() {
         return motiv;

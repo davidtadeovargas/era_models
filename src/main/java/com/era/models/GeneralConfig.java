@@ -36,7 +36,7 @@ public class GeneralConfig {
     private float  number = 0;
     
     @Column(name = "estac", nullable = false, length = 30)
-    private String station;
+    private String estac;
     
     @Column(name = "dia", nullable = true, columnDefinition = "int default 0")
     private int day = 0;
@@ -51,10 +51,10 @@ public class GeneralConfig {
     private int  year = 0;
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal;
+    private String sucu;
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber;
+    private String nocaj;
     
     @Column(name = "extr", nullable = false, length = 1000)
     private String extra = "";
@@ -102,12 +102,12 @@ public class GeneralConfig {
         this.number = number;
     }
 
-    public String getStation() {
-        return station;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setStation(String station) {
-        this.station = station;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
     public int getDay() {
@@ -142,20 +142,20 @@ public class GeneralConfig {
         this.year = year;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public String getExtra() {
@@ -182,7 +182,6 @@ public class GeneralConfig {
         this.fmod = fmod;
     }
 
-    
-    
+        
 
 }

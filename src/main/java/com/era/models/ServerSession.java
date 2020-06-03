@@ -28,8 +28,8 @@ public class ServerSession {
     @Column(name = "id", nullable = false)
     private int id;
     
-    @Column(name = "genericSerial", nullable = false, length = 19)
-    private String genericSerial;
+    @Column(name = "code", nullable = false, length = 19)
+    private String code;
     
     @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -45,13 +45,13 @@ public class ServerSession {
         this.id = id;
     }
 
-    public String getGenericSerial() {
-        return genericSerial;
+    public String getCode() {
+        return code;
     }
 
-    public void setGenericSerial(String genericSerial) {
-        this.genericSerial = genericSerial;
-    }
+    public void setCode(String code) {
+        this.code = code;
+    }   
 
     public String getEstac() {
         return estac;

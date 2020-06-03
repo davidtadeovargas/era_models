@@ -20,8 +20,8 @@ public class PaymentForm {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
     
-    @Column(name = "c_FormaPago", nullable = false,length = 5)
-    private String paymentForm;
+    @Column(name = "code", nullable = false,length = 5)
+    private String code;
     
     @Column(name = "Descripcion", nullable = false, length = 45)
     private String description = "";
@@ -40,12 +40,12 @@ public class PaymentForm {
         this.id = id;
     }
 
-    public String getPaymentForm() {
-        return paymentForm;
+    public String getCode() {
+        return code;
     }
 
-    public void setPaymentForm(String paymentForm) {
-        this.paymentForm = paymentForm;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getDescription() {

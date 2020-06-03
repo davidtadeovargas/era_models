@@ -41,9 +41,9 @@ import java.math.BigDecimal;
   @Column(name = "regimenFiscal", nullable = false) private String regimenFiscal = "";
   @Column(name = "cadenaOriginal", nullable = false) private String cadenaOriginal = "";
   @Column(name = "certificadosat", nullable = false) private String certificadosat = "";
-  @Column(name = "estac", nullable = true, length = 30) private String usuario;
-  @Column(name = "sucu", nullable = true, length = 30) private String sucursal;
-  @Column(name = "nocaj", nullable = true, length = 30) private String caja;
+  @Column(name = "estac", nullable = true, length = 30) private String estac;
+  @Column(name = "sucu", nullable = true, length = 30) private String sucu;
+  @Column(name = "nocaj", nullable = true, length = 30) private String nocaj;
   @Column(name = "color", nullable = false, length = 11, columnDefinition = "int default 0") private int color = 0;  
   @Column(name = "falt", nullable = true) private Date falt;
 @Column(name = "fmod", nullable = false) private Date fmod;
@@ -240,28 +240,28 @@ import java.math.BigDecimal;
         this.certificadosat = certificadosat;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCaja() {
-        return caja;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCaja(String caja) {
-        this.caja = caja;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public int getColor() {
@@ -288,7 +288,6 @@ import java.math.BigDecimal;
         this.fmod = fmod;
     }
 
-
-  
+      
             
 }

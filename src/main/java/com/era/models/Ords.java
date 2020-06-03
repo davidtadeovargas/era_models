@@ -17,8 +17,7 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "ords") public class Ords {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "codord", nullable = false) private int id;
-  @Index(name="prov") @Column(name = "prov", nullable = false,length = 30) private String prov;
-  @Column(name = "proy", nullable = false,length = 30) private String proy;
+  @Index(name="prov") @Column(name = "prov", nullable = false,length = 30) private String prov;  
   @Column(name = "subtot", nullable = true, columnDefinition = "float default 0") private float subtot;
   @Column(name = "impue", nullable = true, columnDefinition = "float default 0") private float impue;
   @Column(name = "total", nullable = true, columnDefinition = "float default 0") private float total;
@@ -44,14 +43,6 @@ import org.hibernate.annotations.Index;
 
     public void setProv(String prov) {
         this.prov = prov;
-    }
-
-    public String getProy() {
-        return proy;
-    }
-
-    public void setProy(String proy) {
-        this.proy = proy;
     }
 
     public float getSubtot() {

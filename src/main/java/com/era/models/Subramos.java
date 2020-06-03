@@ -18,7 +18,7 @@ import org.hibernate.annotations.Index;
 
 @Entity @Table(name = "subramos",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Subramos {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="subramos_codigo") @Column(name = "codigo", nullable = false,length = 30) private String codigo;
+  @Index(name="subramos_codigo") @Column(name = "code", nullable = false,length = 30) private String code;
   @Column(name = "descripcion", nullable = false,length = 255) private String descripcion;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -34,13 +34,14 @@ import org.hibernate.annotations.Index;
         this.id = id;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getCode() {
+        return code;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCode(String code) {
+        this.code = code;
     }
+    
 
     public String getDescripcion() {
         return descripcion;

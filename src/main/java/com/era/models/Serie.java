@@ -24,8 +24,8 @@ public class Serie {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "ser", nullable = false, length = 30)
-    private String serie;
+    @Column(name = "code", nullable = false, length = 30)
+    private String code;
     
     @Column(name = "descrip", nullable = false, length = 255)
     private String description;
@@ -37,13 +37,13 @@ public class Serie {
     private int consecutive;
 
     @Column(name = "estac", nullable = false, length = 30)
-    private String estation;
+    private String estac;
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal;
+    private String sucu;
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber;
+    private String nocaj;
     
     @Column(name = "falt", nullable = true)
     private Date falt;
@@ -59,12 +59,12 @@ public class Serie {
         this.id = id;
     }
 
-    public String getSerie() {
-        return serie;
+    public String getCode() {
+        return code;
     }
 
-    public void setSerie(String serie) {
-        this.serie = serie;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getDescription() {
@@ -91,28 +91,28 @@ public class Serie {
         this.consecutive = consecutive;
     }
 
-    public String getEstation() {
-        return estation;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setEstation(String estation) {
-        this.estation = estation;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public Date getFalt() {
@@ -130,7 +130,5 @@ public class Serie {
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-
-       
     
 }

@@ -30,8 +30,8 @@ public class Product {
     private int id;
     
     @Index(name = "prods_prod_index")
-    @Column(name = "prod", nullable = false, length = 255)
-    private String codeProduct;
+    @Column(name = "code", nullable = false, length = 255)
+    private String code;
     
     @Column(name = "prodop1", length = 30)
     private String codeProductOptional1 = "";
@@ -220,16 +220,16 @@ public class Product {
     private int iventory = 1;
     
     @Column(name = "estac", nullable = false, length = 30)
-    private String estation;
+    private String estac;
     
     @Column(name = "estaccrea", length = 30)
     private String creationStation = "";
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String branchOffice;
+    private String sucu;
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String numberCash;
+    private String nocaj;
     
     @Column(name = "lote", length = 30)
     private String lot = "";
@@ -302,12 +302,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getCodeProduct() {
-        return codeProduct;
+    public String getCode() {
+        return code;
     }
 
-    public void setCodeProduct(String codeProduct) {
-        this.codeProduct = codeProduct;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getCodeProductOptional1() {
@@ -806,12 +806,12 @@ public class Product {
         this.iventory = iventory;
     }
 
-    public String getEstation() {
-        return estation;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setEstation(String estation) {
-        this.estation = estation;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
     public String getCreationStation() {
@@ -822,20 +822,20 @@ public class Product {
         this.creationStation = creationStation;
     }
 
-    public String getBranchOffice() {
-        return branchOffice;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setBranchOffice(String branchOffice) {
-        this.branchOffice = branchOffice;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getNumberCash() {
-        return numberCash;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setNumberCash(String numberCash) {
-        this.numberCash = numberCash;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public String getLot() {
@@ -1005,9 +1005,7 @@ public class Product {
     public void setWarehouseID(int warehouseID) {
         this.warehouseID = warehouseID;
     }
-    
-    
-    
-    
+
+        
         
 }

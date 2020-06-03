@@ -22,11 +22,11 @@ public class Warehouse {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "alma", nullable = false, length = 30)
+    @Column(name = "code", nullable = false, length = 30)
     private String code;
     
     @Column(name = "respon", nullable = false, length = 30)
-    private String responsible;
+    private String responsable;
     
     @Column(name = "almadescrip", nullable = false, length = 255)
     private String description;
@@ -41,13 +41,13 @@ public class Warehouse {
     private String address3 = "";
     
     @Column(name = "estac", nullable = false, length = 30)
-    private String station;
+    private String estac;
     
     @Column(name = "sucu", nullable = false, length = 30)
-    private String sucursal = "";
+    private String sucu = "";
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String cashNumber;
+    private String nocaj;
     
     @Column(name = "falt", nullable = true) private Date falt;
 @Column(name = "fmod", nullable = false) private Date fmod;
@@ -68,12 +68,12 @@ public class Warehouse {
         this.code = code;
     }
 
-    public String getResponsible() {
-        return responsible;
+    public String getResponsable() {
+        return responsable;
     }
 
-    public void setResponsible(String responsible) {
-        this.responsible = responsible;
+    public void setResponsable(String responsable) {
+        this.responsable = responsable;
     }
 
     public String getDescription() {
@@ -108,28 +108,28 @@ public class Warehouse {
         this.address3 = address3;
     }
 
-    public String getStation() {
-        return station;
+    public String getEstac() {
+        return estac;
     }
 
-    public void setStation(String station) {
-        this.station = station;
+    public void setEstac(String estac) {
+        this.estac = estac;
     }
 
-    public String getSucursal() {
-        return sucursal;
+    public String getSucu() {
+        return sucu;
     }
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
+    public void setSucu(String sucu) {
+        this.sucu = sucu;
     }
 
-    public String getCashNumber() {
-        return cashNumber;
+    public String getNocaj() {
+        return nocaj;
     }
 
-    public void setCashNumber(String cashNumber) {
-        this.cashNumber = cashNumber;
+    public void setNocaj(String nocaj) {
+        this.nocaj = nocaj;
     }
 
     public Date getFalt() {
@@ -148,8 +148,6 @@ public class Warehouse {
         this.fmod = fmod;
     }
 
-
-
-    
+        
     
 }

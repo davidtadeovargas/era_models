@@ -23,7 +23,7 @@ public class Supplier {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "prov", nullable = false, length = 30)
+    @Column(name = "code", nullable = false, length = 30)
     private String code = "";
     
     @Column(name = "ser", nullable = false, length = 30)
