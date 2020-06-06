@@ -22,8 +22,7 @@ import org.hibernate.annotations.Index;
 @Entity @Table(name = "emps",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Company {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="companyCode") @Column(name = "cod", nullable = false,length = 30) private String companyCode;
-  @Column(name = "name_db", nullable = true,length = 255) private String nameDB;
-  @Index(name="emps_ser") @Column(name = "ser", nullable = true,length = 30) private String ser;
+  @Column(name = "name_db", nullable = true,length = 255) private String nameDB;  
   @Column(name = "lada", nullable = true, length = 10) private String lada = "";
   @Column(name = "vend", nullable = true, length = 30) private String vend = "";
   @Column(name = "codclas", nullable = true,length = 30) private String codclas = "";
@@ -48,13 +47,14 @@ import org.hibernate.annotations.Index;
   @Column(name = "pai", nullable = true, length = 255) private String pai = "";
   @Column(name = "revis", nullable = true, length = 100) private String revis = "";
   @Column(name = "pags", nullable = true, length = 100) private String pags = "";
-  @JsonProperty("RFC")@Column(name = "RFC", nullable = true, length = 21) private String RFC = "";
+  @JsonProperty("RFC")@Column(name = "RFC", nullable = false, length = 21) private String RFC = "";
   @Column(name = "descu", nullable = true, columnDefinition = "float default 0") private float descu = 0;
   @Column(name = "deposit", nullable = true, columnDefinition = "float default 0") private float deposit = 0;
   @Column(name = "co1", nullable = true) private String co1 = "";
   @Column(name = "co2", nullable = true) private String co2 = "";
   @Column(name = "otramon", nullable = true, columnDefinition = "boolean default false") private boolean otramon = true;
   @Column(name = "otramonc", nullable = true, columnDefinition = "boolean default false") private boolean otramonc = true;
+  @Column(name = "cashCustomer", nullable = true, columnDefinition = "boolean default false") private boolean cashCustomer = false;
   @Column(name = "co3", nullable = true) private String co3 = "";
   @Column(name = "pagweb1", nullable = true) private String pagweb1 = "";
   @Column(name = "pagweb2", nullable = true) private String pagweb2 = "";
@@ -94,38 +94,7 @@ import org.hibernate.annotations.Index;
   @Column(name = "bloqlimcred", nullable = true, columnDefinition = "boolean default false") private boolean bloqlimcred = false;
   @Column(name = "ctaconta", nullable = true, length = 30) private String ctaconta = "";
   @Column(name = "list", nullable = true, columnDefinition = "int default 0") private int list;
-  @Column(name = "contac3", nullable = true) private String contac3 = "";
-  @Column(name = "telcon3", nullable = true) private String telcon3 = "";
-  @Column(name = "telper3", nullable = true) private String telper3 = "";
-  @Column(name = "telper33", nullable = true) private String telper33 = "";
-  @Column(name = "contac4", nullable = true) private String contac4 = "";
-  @Column(name = "telcon4", nullable = true) private String telcon4 = "";
-  @Column(name = "telper4", nullable = true) private String telper4 = "";
-  @Column(name = "telper44", nullable = true) private String telper44 = "";
-  @Column(name = "contac5", nullable = true) private String contac5 = "";
-  @Column(name = "telcon5", nullable = true) private String telcon5 = "";
-  @Column(name = "telper5", nullable = true) private String telper5 = "";
-  @Column(name = "telper55", nullable = true) private String telper55 = "";
-  @Column(name = "contac6", nullable = true) private String contac6 = "";
-  @Column(name = "telcon6", nullable = true) private String telcon6 = "";
-  @Column(name = "telper6", nullable = true) private String telper6 = "";
-  @Column(name = "telper66", nullable = true) private String telper66 = "";
-  @Column(name = "contac7", nullable = true) private String contac7 = "";
-  @Column(name = "telcon7", nullable = true) private String telcon7 = "";
-  @Column(name = "telper7", nullable = true) private String telper7 = "";
-  @Column(name = "telper77", nullable = true) private String telper77 = "";
-  @Column(name = "contac8", nullable = true) private String contac8 = "";
-  @Column(name = "telcon8", nullable = true) private String telcon8 = "";
-  @Column(name = "telper8", nullable = true) private String telper8 = "";
-  @Column(name = "telper88", nullable = true) private String telper88 = "";
-  @Column(name = "contac9", nullable = true) private String contac9 = "";
-  @Column(name = "telcon9", nullable = true) private String telcon9 = "";
-  @Column(name = "telper9", nullable = true) private String telper9 = "";
-  @Column(name = "telper99", nullable = true) private String telper99 = "";
-  @Column(name = "Contac10", nullable = true) private String Contac10 = "";
-  @Column(name = "telcon10", nullable = true) private String telcon10 = "";
-  @Column(name = "telper10", nullable = true) private String telper10 = "";
-  @Column(name = "telper100", nullable = true) private String telper100 = "";  
+  @Column(name = "contac6", nullable = true) private String contac6 = "";  
   @Column(name = "beneficiario", nullable = true,length = 30) private String beneficiario = "";
   @Column(name = "usocfdi", nullable = true,length = 10) private String usocfdi;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
@@ -141,8 +110,7 @@ import org.hibernate.annotations.Index;
   @Column(name = "lugar_de_expedicion", nullable = true, length = 255) private String expeditionPlace = "";
   @Column(name = "ruta_certificado", nullable = true, length = 2045) private String certificatePath = "";
   @Column(name = "ruta_key", nullable = true, length = 2045) private String keyPath = "";
-  @Column(name = "password_certificado", nullable = true, length = 1000) private String certificatePassword = "";
-  @Column(name = "ruta_aplicacion", nullable = false, length = 500) private String appPath = "";
+  @Column(name = "password_certificado", nullable = true, length = 1000) private String certificatePassword = "";  
   @Column(name = "plantilla", nullable = true, length = 100) private String template = "";
   @Column(name = "regimen_fiscal", nullable = true, length = 255) private String fiscalRegimen = "";
   @Column(name = "test", nullable = true, length = 5, columnDefinition = "boolean default false") private boolean test = false;
@@ -169,14 +137,6 @@ import org.hibernate.annotations.Index;
 
     public void setNameDB(String nameDB) {
         this.nameDB = nameDB;
-    }
-
-    public String getSer() {
-        return ser;
-    }
-
-    public void setSer(String ser) {
-        this.ser = ser;
     }
 
     public String getLada() {
@@ -739,260 +699,12 @@ import org.hibernate.annotations.Index;
         this.list = list;
     }
 
-    public String getContac3() {
-        return contac3;
-    }
-
-    public void setContac3(String contac3) {
-        this.contac3 = contac3;
-    }
-
-    public String getTelcon3() {
-        return telcon3;
-    }
-
-    public void setTelcon3(String telcon3) {
-        this.telcon3 = telcon3;
-    }
-
-    public String getTelper3() {
-        return telper3;
-    }
-
-    public void setTelper3(String telper3) {
-        this.telper3 = telper3;
-    }
-
-    public String getTelper33() {
-        return telper33;
-    }
-
-    public void setTelper33(String telper33) {
-        this.telper33 = telper33;
-    }
-
-    public String getContac4() {
-        return contac4;
-    }
-
-    public void setContac4(String contac4) {
-        this.contac4 = contac4;
-    }
-
-    public String getTelcon4() {
-        return telcon4;
-    }
-
-    public void setTelcon4(String telcon4) {
-        this.telcon4 = telcon4;
-    }
-
-    public String getTelper4() {
-        return telper4;
-    }
-
-    public void setTelper4(String telper4) {
-        this.telper4 = telper4;
-    }
-
-    public String getTelper44() {
-        return telper44;
-    }
-
-    public void setTelper44(String telper44) {
-        this.telper44 = telper44;
-    }
-
-    public String getContac5() {
-        return contac5;
-    }
-
-    public void setContac5(String contac5) {
-        this.contac5 = contac5;
-    }
-
-    public String getTelcon5() {
-        return telcon5;
-    }
-
-    public void setTelcon5(String telcon5) {
-        this.telcon5 = telcon5;
-    }
-
-    public String getTelper5() {
-        return telper5;
-    }
-
-    public void setTelper5(String telper5) {
-        this.telper5 = telper5;
-    }
-
-    public String getTelper55() {
-        return telper55;
-    }
-
-    public void setTelper55(String telper55) {
-        this.telper55 = telper55;
-    }
-
     public String getContac6() {
         return contac6;
     }
 
     public void setContac6(String contac6) {
         this.contac6 = contac6;
-    }
-
-    public String getTelcon6() {
-        return telcon6;
-    }
-
-    public void setTelcon6(String telcon6) {
-        this.telcon6 = telcon6;
-    }
-
-    public String getTelper6() {
-        return telper6;
-    }
-
-    public void setTelper6(String telper6) {
-        this.telper6 = telper6;
-    }
-
-    public String getTelper66() {
-        return telper66;
-    }
-
-    public void setTelper66(String telper66) {
-        this.telper66 = telper66;
-    }
-
-    public String getContac7() {
-        return contac7;
-    }
-
-    public void setContac7(String contac7) {
-        this.contac7 = contac7;
-    }
-
-    public String getTelcon7() {
-        return telcon7;
-    }
-
-    public void setTelcon7(String telcon7) {
-        this.telcon7 = telcon7;
-    }
-
-    public String getTelper7() {
-        return telper7;
-    }
-
-    public void setTelper7(String telper7) {
-        this.telper7 = telper7;
-    }
-
-    public String getTelper77() {
-        return telper77;
-    }
-
-    public void setTelper77(String telper77) {
-        this.telper77 = telper77;
-    }
-
-    public String getContac8() {
-        return contac8;
-    }
-
-    public void setContac8(String contac8) {
-        this.contac8 = contac8;
-    }
-
-    public String getTelcon8() {
-        return telcon8;
-    }
-
-    public void setTelcon8(String telcon8) {
-        this.telcon8 = telcon8;
-    }
-
-    public String getTelper8() {
-        return telper8;
-    }
-
-    public void setTelper8(String telper8) {
-        this.telper8 = telper8;
-    }
-
-    public String getTelper88() {
-        return telper88;
-    }
-
-    public void setTelper88(String telper88) {
-        this.telper88 = telper88;
-    }
-
-    public String getContac9() {
-        return contac9;
-    }
-
-    public void setContac9(String contac9) {
-        this.contac9 = contac9;
-    }
-
-    public String getTelcon9() {
-        return telcon9;
-    }
-
-    public void setTelcon9(String telcon9) {
-        this.telcon9 = telcon9;
-    }
-
-    public String getTelper9() {
-        return telper9;
-    }
-
-    public void setTelper9(String telper9) {
-        this.telper9 = telper9;
-    }
-
-    public String getTelper99() {
-        return telper99;
-    }
-
-    public void setTelper99(String telper99) {
-        this.telper99 = telper99;
-    }
-
-    public String getContac10() {
-        return Contac10;
-    }
-
-    public void setContac10(String Contac10) {
-        this.Contac10 = Contac10;
-    }
-
-    public String getTelcon10() {
-        return telcon10;
-    }
-
-    public void setTelcon10(String telcon10) {
-        this.telcon10 = telcon10;
-    }
-
-    public String getTelper10() {
-        return telper10;
-    }
-
-    public void setTelper10(String telper10) {
-        this.telper10 = telper10;
-    }
-
-    public String getTelper100() {
-        return telper100;
-    }
-
-    public void setTelper100(String telper100) {
-        this.telper100 = telper100;
     }
 
     public String getBeneficiario() {
@@ -1123,14 +835,6 @@ import org.hibernate.annotations.Index;
         this.certificatePassword = certificatePassword;
     }
 
-    public String getAppPath() {
-        return appPath;
-    }
-
-    public void setAppPath(String appPath) {
-        this.appPath = appPath;
-    }
-
     public String getTemplate() {
         return template;
     }
@@ -1155,6 +859,12 @@ import org.hibernate.annotations.Index;
         this.test = test;
     }
 
-                      
+    public boolean isCashCustomer() {
+        return cashCustomer;
+    }
+
+    public void setCashCustomer(boolean cashCustomer) {
+        this.cashCustomer = cashCustomer;
+    }   
    
 }
