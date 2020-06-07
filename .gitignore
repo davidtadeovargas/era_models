@@ -5,3 +5,8 @@ target/era_models 1.0-SNAPSHOT.jar
 target/maven-archiver/pom.properties
 target/test-classes/.netbeans_automatic_build
 *.class
+target/classes/com/era/models/Company.class
+target/classes/com/era/models/Serie.class
+target/classes/com/era/models/Supplier.class
+target/era_models 1.0-SNAPSHOT.jar
+target/maven-archiver/pom.properties

@@ -121,7 +121,7 @@ public class BasDats {
     
     @Column(name = "test", nullable = true, columnDefinition = "boolean default false")
     private boolean test = false;
-    
+        
     @Column(name = "falt", nullable = true) private Date falt;
     @Column(name = "fmod", nullable = false) private Date fmod; 
 
