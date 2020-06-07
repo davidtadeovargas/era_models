@@ -30,6 +30,9 @@ public class Serie {
     @Column(name = "descrip", nullable = false, length = 255)
     private String description;
     
+    @Column(name = "ser", nullable = false, length = 10)
+    private String ser;
+    
     @Column(name = "tip", nullable = false, length = 10)
     private String type;
     
@@ -63,6 +66,14 @@ public class Serie {
         return code;
     }
 
+    public String getSer() {
+        return ser;
+    }
+
+    public void setSer(String ser) {
+        this.ser = ser;
+    }
+    
     public void setCode(String code) {
         this.code = code;
     }

@@ -29,91 +29,90 @@ public class Supplier {
     @Column(name = "ser", nullable = false, length = 30)
     private String serie;
     
-    @Column(name = "codclas", nullable = false, length = 30)
-    private String clasificationCode = "";
-    
-    @Column(name = "zon", nullable = false, length = 30)
+    @Column(name = "zon", nullable = true, length = 30)
     private String zone = "";
     
-    @Column(name = "giro", nullable = false, length = 30)
+    @Column(name = "limtcred", nullable = true, columnDefinition = "float default 0") private float limtcred = 0;
+    
+    @Column(name = "giro", nullable = true, length = 30)
     private String giro = "";
     
-    @Column(name = "banc", nullable = false, length = 30)
+    @Column(name = "banc", nullable = true, length = 30)
     private String bank = "";
     
-    @Column(name = "clavbanc", nullable = false, length = 255)
+    @Column(name = "clavbanc", nullable = true, length = 255)
     private String claveBank = "";
         
-    @Column(name = "lada", nullable = false, length = 10)
+    @Column(name = "lada", nullable = true, length = 10)
     private String lada = "";
     
-    @Column(name = "metpag", nullable = false, length = 45)
+    @Column(name = "metpag", nullable = true, length = 45)
     private String paymentMethod = "";
     
-    @Column(name = "cta", nullable = false, length = 45)
+    @Column(name = "cta", nullable = true, length = 45)
     private String account = "0000";
     
-    @Column(name = "enlada", nullable = false, length = 10)
+    @Column(name = "enlada", nullable = true, length = 10)
     private String deliverLada = "";
     
     @Column(name = "nom", nullable = false, length = 255)
     private String name;
     
-    @Column(name = "tel", nullable = false, length = 255)
+    @Column(name = "tel", nullable = true, length = 255)
     private String phone = "";
     
-    @Column(name = "cel", nullable = false, length = 255)
+    @Column(name = "cel", nullable = true, length = 255)
     private String celphone = "";
     
-    @Column(name = "encel", nullable = false, length = 255)
+    @Column(name = "encel", nullable = true, length = 255)
     private String deliverCellphone = "";
     
-    @Column(name = "clasjera", nullable = false, length = 2048)
+    @Column(name = "clasjera", nullable = true, length = 2048)
     private String jerarchyClasification = "";        
     
-    @Column(name = "exten", nullable = false, length = 20)
+    @Column(name = "exten", nullable = true, length = 20)
     private String extension = "";
     
-    @Column(name = "calle", nullable = false, length = 255)
+    @Column(name = "calle", nullable = true, length = 255)
     private String street = "";
     
-    @Column(name = "encalle", nullable = false, length = 255)
+    @Column(name = "encalle", nullable = true, length = 255)
     private String deliverStreet = "";
     
-    @Column(name = "col", nullable = false, length = 255)
+    @Column(name = "col", nullable = true, length = 255)
     private String colony = "";
     
-    @Column(name = "encol", nullable = false, length = 255)
+    @Column(name = "encol", nullable = true, length = 255)
     private String deliverColony = "";
     
-    @Column(name = "CP", nullable = false, length = 20)
+    @Column(name = "CP", nullable = true, length = 20)
     private String cp;
     
-    @Column(name = "encp", nullable = false, length = 20)
+    @Column(name = "encp", nullable = true, length = 20)
     private String deliverCP = "";       
     
-    @Column(name = "ennoint", nullable = false, length = 21)
+    @Column(name = "ennoint", nullable = true, length = 21)
     private String deliverInternalNumber = "";                
     
-    @Column(name = "noint", nullable = false, length = 100)
+    @Column(name = "noint", nullable = true, length = 100)
     private String interiorNumber = "";
     
-    @Column(name = "noext", nullable = false, length = 100)
+    @Column(name = "noext", nullable = true, length = 100)
     private String externalNumber = "";
     
-    @Column(name = "ennoext", nullable = false, length = 21)
+    @Column(name = "ennoext", nullable = true, length = 21)
     private String deliveryExternalNumber = "";
     
-    @Column(name = "ciu", nullable = false, length = 255)
+    @Column(name = "ciu", nullable = true, length = 255)
     private String city = "";
     
-    @Column(name = "enciu", nullable = false, length = 255)
+    @Column(name = "enciu", nullable = true, length = 255)
     private String deliverCity = "";        
     
-    @Column(name = "estad", nullable = false, length = 255)
+    @Column(name = "estad", nullable = true, length = 255)
     private String estate = "";
     
-    @Column(name = "enestad", nullable = false, length = 255)
+    @Column(name = "enestad", nullable = true, length = 255)
     private String deliverEstate = "";
     
     @Column(name = "otramon", nullable = true, columnDefinition = "boolean default false")
@@ -122,86 +121,68 @@ public class Supplier {
     @Column(name = "otramonc", nullable = true, columnDefinition = "boolean default false")
     private boolean anotherCoinC = true;
     
-    @Column(name = "bloq", nullable = false, columnDefinition = "boolean default false")
+    @Column(name = "bloq", nullable = true, columnDefinition = "boolean default false")
     private boolean bloq = false;
     
-    @Column(name = "ctaconta", nullable = false, length = 30)
+    @Column(name = "ctaconta", nullable = true, length = 30)
     private String contableAccount = "";
     
-    @Column(name = "revis", nullable = false, length = 100)
+    @Column(name = "revis", nullable = true, length = 100)
     private String revision = "";
     
-    @Column(name = "pags", nullable = false, length = 100)
+    @Column(name = "pags", nullable = true, length = 100)
     private String payments = "";
     
-    @Column(name = "pais", nullable = false, length = 255)
+    @Column(name = "pais", nullable = true, length = 255)
     private String country;
     
-    @Column(name = "enpais", nullable = false, length = 255)
+    @Column(name = "enpais", nullable = true, length = 255)
     private String deliverCountry = "";
     
-    @Column(name = "RFC", nullable = false, length = 21)
+    @Column(name = "RFC", nullable = true, length = 21)
     private String rfc = "";
     
-    @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
+    @Column(name = "descu", nullable = true, columnDefinition = "float default 0")
     private float disccount = 0;
     
-    @Column(name = "diacred", nullable = false, length = 21)
+    @Column(name = "diacred", nullable = true, length = 21)
     private String creditDays = "";                    
     
-    @Column(name = "bloqlimcred", nullable = false, columnDefinition = "boolean default false")
+    @Column(name = "bloqlimcred", nullable = true, columnDefinition = "boolean default false")
     private boolean bloqlimcred = false;        
     
-    @Column(name = "co1", nullable = false, length = 100)
+    @Column(name = "co1", nullable = true, length = 100)
     private String email1 = "";
     
-    @Column(name = "co2", nullable = false, length = 100)
+    @Column(name = "co2", nullable = true, length = 100)
     private String email2 = "";        
     
-    @Column(name = "co3", nullable = false, length = 100)
+    @Column(name = "co3", nullable = true, length = 100)
     private String email3 = "";
     
-    @Column(name = "enco1", nullable = false, length = 100)
+    @Column(name = "enco1", nullable = true, length = 100)
     private String deliverEmail1 = "";
     
-    @Column(name = "enco2", nullable = false, length = 100)
+    @Column(name = "enco2", nullable = true, length = 100)
     private String deliverEmail2 = "";
     
-    @Column(name = "enco3", nullable = false, length = 100)
+    @Column(name = "enco3", nullable = true, length = 100)
     private String deliverEmail3 = "";
     
-    @Column(name = "pagweb1", nullable = false, length = 255)
+    @Column(name = "pagweb1", nullable = true, length = 255)
     private String webpage1 = "";
     
-    @Column(name = "pagweb2", nullable = false, length = 255)
+    @Column(name = "pagweb2", nullable = true, length = 255)
     private String webpage2 = "";
     
-    @Column(name = "telper1", nullable = false, length = 255)
+    @Column(name = "telper1", nullable = true, length = 255)
     private String personalPhone1 = "";
-    
-    @Column(name = "telper2", nullable = true, length = 255)
-    private String personalPhone2;               
-    
-    @Column(name = "observ", nullable = false, length = 255)
+        
+    @Column(name = "observ", nullable = true, length = 255)
     private String observations = "";
     
-    @Column(name = "pers", nullable = false, length = 2)
+    @Column(name = "pers", nullable = true, length = 2)
     private String pers = "";        
-    
-    @Column(name = "telcon3", nullable = false, length = 255)
-    private String telcon3 = "";
-    
-    @Column(name = "telper3", nullable = false, length = 255)
-    private String telper3 = "";
-    
-    @Column(name = "telper33", nullable = false, length = 255)
-    private String telper33 = "";
-    
-    @Column(name = "contac4", nullable = false, length = 255)
-    private String contac4 = "";
-    
-    @Column(name = "telcon4", nullable = false, length = 255)
-    private String telcon4 = "";
     
     @Column(name = "estac", nullable = false, length = 30)
     private String estac;
@@ -240,14 +221,6 @@ public class Supplier {
 
     public void setSerie(String serie) {
         this.serie = serie;
-    }
-
-    public String getClasificationCode() {
-        return clasificationCode;
-    }
-
-    public void setClasificationCode(String clasificationCode) {
-        this.clasificationCode = clasificationCode;
     }
 
     public String getZone() {
@@ -642,14 +615,6 @@ public class Supplier {
         this.personalPhone1 = personalPhone1;
     }
 
-    public String getPersonalPhone2() {
-        return personalPhone2;
-    }
-
-    public void setPersonalPhone2(String personalPhone2) {
-        this.personalPhone2 = personalPhone2;
-    }
-
     public String getObservations() {
         return observations;
     }
@@ -664,46 +629,6 @@ public class Supplier {
 
     public void setPers(String pers) {
         this.pers = pers;
-    }
-
-    public String getTelcon3() {
-        return telcon3;
-    }
-
-    public void setTelcon3(String telcon3) {
-        this.telcon3 = telcon3;
-    }
-
-    public String getTelper3() {
-        return telper3;
-    }
-
-    public void setTelper3(String telper3) {
-        this.telper3 = telper3;
-    }
-
-    public String getTelper33() {
-        return telper33;
-    }
-
-    public void setTelper33(String telper33) {
-        this.telper33 = telper33;
-    }
-
-    public String getContac4() {
-        return contac4;
-    }
-
-    public void setContac4(String contac4) {
-        this.contac4 = contac4;
-    }
-
-    public String getTelcon4() {
-        return telcon4;
-    }
-
-    public void setTelcon4(String telcon4) {
-        this.telcon4 = telcon4;
     }
 
     public String getEstac() {
@@ -746,8 +671,11 @@ public class Supplier {
         this.fmod = fmod;
     }
 
-    
-    
-    
-    
+    public float getLimtcred() {
+        return limtcred;
+    }
+
+    public void setLimtcred(float limtcred) {
+        this.limtcred = limtcred;
+    }
 }
