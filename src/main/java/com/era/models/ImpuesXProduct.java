@@ -17,7 +17,7 @@ import org.hibernate.annotations.Index;
 
 @Entity@Table(name = "impues_x_product")public class ImpuesXProduct {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Index(name="produ") @Column(name = "produ", nullable = false,length = 30) private String produ;
+  @Index(name="code") @Column(name = "code", nullable = false,length = 30) private String code;
   @Index(name="impue") @Column(name = "impue",nullable = false,length = 30) private String impue;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -33,12 +33,12 @@ import org.hibernate.annotations.Index;
         this.id = id;
     }
 
-    public String getProdu() {
-        return produ;
+    public String getCode() {
+        return code;
     }
 
-    public void setProdu(String produ) {
-        this.produ = produ;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getImpue() {

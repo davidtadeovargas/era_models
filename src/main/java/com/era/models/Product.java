@@ -69,8 +69,8 @@ public class Product {
     @Column(name = "tip", length = 30)
     private String tip = "";
     
-    @Column(name = "solmaxmin", length = 11, columnDefinition = "int default 0")
-    private int askMaxMin = 1;
+    @Column(name = "solmaxmin", length = 11, columnDefinition = "int default false")
+    private boolean askMaxMin = false;
     
     @Column(name = "marc", length = 30)
     private String brand = "";
@@ -87,6 +87,9 @@ public class Product {
     @Column(name = "colo", length = 30)
     private String color = "";
                         
+    @Column(name = "name", length = 30)
+    private String name = "";
+    
     @Column(name = "solser", columnDefinition = "boolean default false")
     private boolean askSerie = false;
     
@@ -207,17 +210,17 @@ public class Product {
     @Column(name = "max", length = 11, columnDefinition = "int default 0")
     private int maximum = 1;
     
-    @Column(name = "bajcost", length = 11, columnDefinition = "int default 0")
-    private int lowerCost = 0;
+    @Column(name = "bajcost", length = 11, columnDefinition = "int default false")
+    private boolean lowerCost = false;
     
-    @Column(name = "esvta", length = 11, columnDefinition = "int default 0")
-    private int isForSale = 0;
+    @Column(name = "esvta", length = 11, columnDefinition = "int default true")
+    private boolean isForSale = true;
     
-    @Column(name = "compue", length = 11, columnDefinition = "int default 0")
-    private int compound = 0;
+    @Column(name = "compue", length = 11, columnDefinition = "int default false")
+    private boolean compound = false;
     
-    @Column(name = "invent", length = 11, columnDefinition = "int default 0")
-    private int iventory = 1;
+    @Column(name = "invent", length = 11, columnDefinition = "int default true")
+    private boolean iventory = true;
     
     @Column(name = "estac", nullable = false, length = 30)
     private String estac;
@@ -234,8 +237,8 @@ public class Product {
     @Column(name = "lote", length = 30)
     private String lot = "";
     
-    @Column(name = "pedimen", length = 30)
-    private String pediment = "";
+    @Column(name = "pedimen", length = 30, columnDefinition = "boolean default false")
+    private boolean pediment = false;
                
     @Column(name = "servi", columnDefinition = "boolean default false")
     private boolean service = false;
@@ -406,11 +409,11 @@ public class Product {
         this.tip = tip;
     }
 
-    public int getAskMaxMin() {
+    public boolean getAskMaxMin() {
         return askMaxMin;
     }
 
-    public void setAskMaxMin(int askMaxMin) {
+    public void setAskMaxMin(boolean askMaxMin) {
         this.askMaxMin = askMaxMin;
     }
 
@@ -774,35 +777,35 @@ public class Product {
         this.maximum = maximum;
     }
 
-    public int getLowerCost() {
+    public boolean getLowerCost() {
         return lowerCost;
     }
 
-    public void setLowerCost(int lowerCost) {
+    public void setLowerCost(boolean lowerCost) {
         this.lowerCost = lowerCost;
     }
 
-    public int getIsForSale() {
+    public boolean getIsForSale() {
         return isForSale;
     }
 
-    public void setIsForSale(int isForSale) {
+    public void setIsForSale(boolean isForSale) {
         this.isForSale = isForSale;
     }
 
-    public int getCompound() {
+    public boolean getCompound() {
         return compound;
     }
 
-    public void setCompound(int compound) {
+    public void setCompound(boolean compound) {
         this.compound = compound;
     }
 
-    public int getIventory() {
+    public boolean getIventory() {
         return iventory;
     }
 
-    public void setIventory(int iventory) {
+    public void setIventory(boolean iventory) {
         this.iventory = iventory;
     }
 
@@ -846,11 +849,11 @@ public class Product {
         this.lot = lot;
     }
 
-    public String getPediment() {
+    public boolean getPediment() {
         return pediment;
     }
 
-    public void setPediment(String pediment) {
+    public void setPediment(boolean pediment) {
         this.pediment = pediment;
     }
 
@@ -1006,6 +1009,11 @@ public class Product {
         this.warehouseID = warehouseID;
     }
 
-        
-        
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
