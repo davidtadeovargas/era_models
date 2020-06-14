@@ -174,6 +174,36 @@ public class Product {
     @Column(name = "utilvta10", columnDefinition = "float default 0")
     private float utilSales10 = 0;        
     
+    @Column(name = "utility1", columnDefinition = "float default 0")
+    private float utility1 = 0;
+    
+    @Column(name = "utility2", columnDefinition = "float default 0")
+    private float utility2 = 0;
+    
+    @Column(name = "utility3", columnDefinition = "float default 0")
+    private float utility3 = 0;
+    
+    @Column(name = "utility4", columnDefinition = "float default 0")
+    private float utility4 = 0;
+    
+    @Column(name = "utility5", columnDefinition = "float default 0")
+    private float utility5 = 0;
+    
+    @Column(name = "utility6", columnDefinition = "float default 0")
+    private float utility6 = 0;
+    
+    @Column(name = "utility7", columnDefinition = "float default 0")
+    private float utility7 = 0;
+    
+    @Column(name = "utility8", columnDefinition = "float default 0")
+    private float utility8 = 0;
+    
+    @Column(name = "utility9", columnDefinition = "float default 0")
+    private float utility9 = 0;
+    
+    @Column(name = "utility10", columnDefinition = "float default 0")
+    private float utility10 = 0;
+    
     @Column(name = "med", columnDefinition = "float default 0")
     private float measure = 0;
     
@@ -1015,5 +1045,85 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public float getUtility1() {
+        return utility1;
+    }
+
+    public void setUtility1(float utility1) {
+        this.utility1 = utility1;
+    }
+
+    public float getUtility2() {
+        return utility2;
+    }
+
+    public void setUtility2(float utility2) {
+        this.utility2 = utility2;
+    }
+
+    public float getUtility3() {
+        return utility3;
+    }
+
+    public void setUtility3(float utility3) {
+        this.utility3 = utility3;
+    }
+
+    public float getUtility4() {
+        return utility4;
+    }
+
+    public void setUtility4(float utility4) {
+        this.utility4 = utility4;
+    }
+
+    public float getUtility5() {
+        return utility5;
+    }
+
+    public void setUtility5(float utility5) {
+        this.utility5 = utility5;
+    }
+
+    public float getUtility6() {
+        return utility6;
+    }
+
+    public void setUtility6(float utility6) {
+        this.utility6 = utility6;
+    }
+
+    public float getUtility7() {
+        return utility7;
+    }
+
+    public void setUtility7(float utility7) {
+        this.utility7 = utility7;
+    }
+
+    public float getUtility8() {
+        return utility8;
+    }
+
+    public void setUtility8(float utility8) {
+        this.utility8 = utility8;
+    }
+
+    public float getUtility9() {
+        return utility9;
+    }
+
+    public void setUtility9(float utility9) {
+        this.utility9 = utility9;
+    }
+
+    public float getUtility10() {
+        return utility10;
+    }
+
+    public void setUtility10(float utility10) {
+        this.utility10 = utility10;
     }
 }
