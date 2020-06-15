@@ -18,8 +18,7 @@ import org.hibernate.annotations.Index;
 @Entity @Table(name = "kits") public class Kits {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Index(name="code") @Column(name = "code", nullable = false,length = 30) private String code;
-  @Column(name = "prod", nullable = false,length = 30) private String prod;
-  @Column(name = "alma", nullable = false,length = 30) private String alma;
+  @Column(name = "prod", nullable = false,length = 30) private String prod;  
   @Column(name = "cant", nullable = true, columnDefinition = "float default 0") private float cant;  
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -51,14 +50,6 @@ import org.hibernate.annotations.Index;
 
     public void setProd(String prod) {
         this.prod = prod;
-    }
-
-    public String getAlma() {
-        return alma;
-    }
-
-    public void setAlma(String alma) {
-        this.alma = alma;
     }
 
     public float getCant() {
