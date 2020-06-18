@@ -18,7 +18,7 @@ import javax.persistence.UniqueConstraint;
 
 @Entity @Table(name = "conceps",uniqueConstraints = {@UniqueConstraint( columnNames ={"id_id"})}) public class Conceps {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
-  @Column(name = "concep", nullable = false,length = 30) private String concep;
+  @Column(name = "code", nullable = false,length = 30) private String code;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
@@ -34,13 +34,13 @@ import javax.persistence.UniqueConstraint;
         this.id = id;
     }
 
-    public String getConcep() {
-        return concep;
+    public String getCode() {
+        return code;
     }
 
-    public void setConcep(String concep) {
-        this.concep = concep;
-    }
+    public void setCode(String code) {
+        this.code = code;
+    }   
 
     public String getDescrip() {
         return descrip;
