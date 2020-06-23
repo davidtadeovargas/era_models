@@ -30,28 +30,28 @@ public class Sales {
     @Column(name = "noser", nullable = false, length = 30)
     private String noser;
     
-    @Column(name = "monedaID", nullable = false, columnDefinition = "int default 0")
-    private int coinID = 0;
+    @Column(name = "coinCode", nullable = false, length = 30)
+    private String coinCode;
     
     @Column(name = "vend", nullable = false, length = 30)
     private String salesMan;
     
-    @Column(name = "codcot", nullable = false, length = 30)
+    @Column(name = "codcot", nullable = true, length = 30)
     private String codeCotizacion = "";
     
-    @Column(name = "folfisc", nullable = false, length = 100)
+    @Column(name = "folfisc", nullable = true, length = 100)
     private String fiscalFolio = "";
     
-    @Column(name = "transid", nullable = false, length = 100)
+    @Column(name = "transid", nullable = true, length = 100)
     private String transactionID = "";
     
-    @Column(name = "sell", nullable = false, length = 1000)
+    @Column(name = "sell", nullable = true, length = 1000)
     private String sell = "";
     
-    @Column(name = "sellsat", nullable = false, length = 1000)
+    @Column(name = "sellsat", nullable = true, length = 1000)
     private String sellsat = "";
     
-    @Column(name = "certsat", nullable = false, length = 1000)
+    @Column(name = "certsat", nullable = true, length = 1000)
     private String certsat = "";
     
     @Column(name = "lugexp", nullable = true, length = 100)
@@ -132,7 +132,7 @@ public class Sales {
     @Column(name = "metpag", nullable = false, length = 42)
     private String paymentMethod;
     
-    @Column(name = "cta", nullable = false, length = 42)
+    @Column(name = "cta", nullable = true, length = 42)
     private String account;
     
     @Column(name = "femi", nullable = false)
@@ -150,19 +150,19 @@ public class Sales {
     @Column(name = "tot", nullable = false)
     private BigDecimal total;
     
-    @Column(name = "tic", nullable = false, columnDefinition = "int default 0")
-    private int ticket;
+    @Column(name = "tic", nullable = true, columnDefinition = "boolean default false")
+    private boolean ticket = false;
     
     @Column(name = "estad", nullable = false, length = 10)
     private String estatus;
     
-    @Column(name = "motiv", nullable = false, length = 255)
+    @Column(name = "motiv", nullable = true, length = 255)
     private String razon;
     
-    @Column(name = "observ", nullable = false, length = 1000)
+    @Column(name = "observ", nullable = true, length = 1000)
     private String observation;
     
-    @Column(name = "timbr", nullable = false, columnDefinition = "boolean default false")
+    @Column(name = "timbr", nullable = true, columnDefinition = "boolean default false")
     private boolean invoiced;
     
     @Column(name = "estac", nullable = false, length = 30)
@@ -183,7 +183,7 @@ public class Sales {
     @Column(name = "fmod", nullable = false)
     private Date fmod;
     
-    @Column(name = "usocfdi", nullable = false, length = 5)
+    @Column(name = "usocfdi", nullable = true, length = 5)
     private String usocfdi;
     
     @Column(name = "tiporelacion", nullable = true, length = 5)
@@ -192,14 +192,11 @@ public class Sales {
     @Column(name = "activo", nullable = true, length = 10)
     private String active = "";
     
-    @Column(name = "subramo", nullable = false, length = 10)
+    @Column(name = "subramo", nullable = true, length = 10)
     private String subramo = "";
     
-    @Column(name = "sector", nullable = false, length = 10)
+    @Column(name = "sector", nullable = true, length = 10)
     private String sector = "";
-    
-    @Column(name = "id_tipodoc", nullable = false, columnDefinition = "int default 0")
-    private int deliverEmail1 = 0;
     
     @Column(name = "id_emp", nullable = true, columnDefinition = "int default 0")
     private int companyID = 0;
@@ -234,12 +231,12 @@ public class Sales {
         this.noser = noser;
     }
 
-    public int getCoinID() {
-        return coinID;
+    public String getCoinCode() {
+        return coinCode;
     }
 
-    public void setCoinID(int coinID) {
-        this.coinID = coinID;
+    public void setCoinCode(String coinCode) {
+        this.coinCode = coinCode;
     }
 
     public String getSalesMan() {
@@ -554,13 +551,13 @@ public class Sales {
         this.total = total;
     }
 
-    public int getTicket() {
+    public boolean isTicket() {
         return ticket;
     }
 
-    public void setTicket(int ticket) {
+    public void setTicket(boolean ticket) {
         this.ticket = ticket;
-    }
+    }   
 
     public String getEstatus() {
         return estatus;
@@ -680,14 +677,6 @@ public class Sales {
 
     public void setSector(String sector) {
         this.sector = sector;
-    }
-
-    public int getDeliverEmail1() {
-        return deliverEmail1;
-    }
-
-    public void setDeliverEmail1(int deliverEmail1) {
-        this.deliverEmail1 = deliverEmail1;
     }
 
     public int getCompanyID() {

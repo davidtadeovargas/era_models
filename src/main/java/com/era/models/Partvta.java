@@ -19,8 +19,7 @@ import java.math.BigDecimal;
 @Entity @Table(name = "partvta") public class Partvta {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Column(name = "prod", nullable = false,length = 255) private String prod;
-  @Index(name="vta") @Column(name = "vta", nullable = false, columnDefinition = "int default 0") private int vta;
-  @Column(name = "tipdoc", nullable = false,length = 30) private String tipdoc;
+  @Index(name="vta") @Column(name = "vta", nullable = false, columnDefinition = "int default 0") private int vta;  
   @Column(name = "cant", nullable = false) private BigDecimal cant;
   @Column(name = "tipcam", nullable = false) private BigDecimal tipcam;
   @Column(name = "devs", nullable = true) private BigDecimal devs = BigDecimal.ZERO;
@@ -30,40 +29,30 @@ import java.math.BigDecimal;
   @Column(name = "idkit", nullable = true, columnDefinition = "int default 0") private int idkit = -1;
   @Column(name = "idlotped", nullable = true, columnDefinition = "int default 0") private int idlotped = -1;
   @Column(name = "list", nullable = true, columnDefinition = "int default 0") private int list = 1;
-  @Column(name = "unid", nullable = false,length = 30) private String unid;
-  @Column(name = "codimpue", nullable = false,length = 30) private String codimpue;
+  @Column(name = "unid", nullable = false,length = 30) private String unid;  
   @Column(name = "alma", nullable = false,length = 30) private String alma;
-  @Column(name = "serprod", nullable = false,length = 30) private String serprod;
-  @Column(name = "comenser", nullable = false,length = 255) private String comenser;
+  @Column(name = "serprod", nullable = true,length = 30) private String serprod;
+  @Column(name = "comenser", nullable = true,length = 255) private String comenser;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
   @Column(name = "pre", nullable = false) private BigDecimal pre;
-  @Column(name = "descu", nullable = false) private BigDecimal descu;
-  @Column(name = "costprom", nullable = true) private BigDecimal costprom = BigDecimal.ZERO;
-  @Column(name = "cost", nullable = true) private BigDecimal cost = BigDecimal.ZERO;
-  @Column(name = "idultcost", nullable = true, columnDefinition = "int default 0") private int idultcost = 0;
-  @Column(name = "peps", nullable = false) private BigDecimal peps;
-  @Column(name = "idpeps", nullable = true, length = 2000) private String idpeps = "";
-  @Column(name = "ueps", nullable = false) private BigDecimal ueps;
-  @Column(name = "idueps", nullable = true, length = 2000) private String idueps = "";
+  @Column(name = "descu", nullable = false) private BigDecimal descu;  
+  @Column(name = "cost", nullable = true) private BigDecimal cost = BigDecimal.ZERO;  
   @Column(name = "mon", nullable = false) private String mon = "";
   @Column(name = "lot", nullable = true, length = 255) private String lot = "";
   @Column(name = "pedimen", nullable = true, length = 255) private String pedimen = "";
-  @Column(name = "fcadu", nullable = false) private Date fcadu = new Date();
+  @Column(name = "fcadu", nullable = true) private Date fcadu = new Date();
   @Column(name = "impo", nullable = false) private BigDecimal impo;
   @Column(name = "impue", nullable = false, columnDefinition = "int default 0") private int impue;
   @Column(name = "tall", nullable = true, length = 30) private String tall = "";
   @Column(name = "colo", nullable = true, length = 30) private String colo = "";
   @Column(name = "cantentre", nullable = true) private BigDecimal cantentre = BigDecimal.ZERO;
   @Column(name = "entrenow", nullable = true) private BigDecimal entrenow = BigDecimal.ZERO;
-  @Column(name = "fentre", nullable = false) private Date fentre = new Date();
+  @Column(name = "fentre", nullable = true) private Date fentre = new Date();
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "fmod", nullable = false) private Date fmod;
-  @Column(name = "activo", nullable = false) private String activo = "";
+  @Column(name = "activo", nullable = true) private String activo = "";
   @Column(name = "cuentacontable", nullable = true) private String cuentacontable;
-  @Column(name = "lotePedimento", nullable = true, columnDefinition = "int default 0") private int lotePedimento = 0;  
-  @Column(name = "monedaID", nullable = false, columnDefinition = "int default 0") private int monedaID = 0;
-  @Column(name = "partidaIdOriginal", nullable = false, columnDefinition = "int default 0") private int partidaIdOriginal = 0;    
-  @Column(name = "descripcionOpcional", nullable = false) private String descripcionOpcional = "";    
+  @Column(name = "lotePedimento", nullable = true, columnDefinition = "int default 0") private int lotePedimento = 0;        
   @Column(name = "estac", nullable = false,length = 30) private String estac;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
@@ -90,14 +79,6 @@ import java.math.BigDecimal;
 
     public void setVta(int vta) {
         this.vta = vta;
-    }
-
-    public String getTipdoc() {
-        return tipdoc;
-    }
-
-    public void setTipdoc(String tipdoc) {
-        this.tipdoc = tipdoc;
     }
 
     public BigDecimal getCant() {
@@ -180,14 +161,6 @@ import java.math.BigDecimal;
         this.unid = unid;
     }
 
-    public String getCodimpue() {
-        return codimpue;
-    }
-
-    public void setCodimpue(String codimpue) {
-        this.codimpue = codimpue;
-    }
-
     public String getAlma() {
         return alma;
     }
@@ -236,60 +209,12 @@ import java.math.BigDecimal;
         this.descu = descu;
     }
 
-    public BigDecimal getCostprom() {
-        return costprom;
-    }
-
-    public void setCostprom(BigDecimal costprom) {
-        this.costprom = costprom;
-    }
-
     public BigDecimal getCost() {
         return cost;
     }
 
     public void setCost(BigDecimal cost) {
         this.cost = cost;
-    }
-
-    public int getIdultcost() {
-        return idultcost;
-    }
-
-    public void setIdultcost(int idultcost) {
-        this.idultcost = idultcost;
-    }
-
-    public BigDecimal getPeps() {
-        return peps;
-    }
-
-    public void setPeps(BigDecimal peps) {
-        this.peps = peps;
-    }
-
-    public String getIdpeps() {
-        return idpeps;
-    }
-
-    public void setIdpeps(String idpeps) {
-        this.idpeps = idpeps;
-    }
-
-    public BigDecimal getUeps() {
-        return ueps;
-    }
-
-    public void setUeps(BigDecimal ueps) {
-        this.ueps = ueps;
-    }
-
-    public String getIdueps() {
-        return idueps;
-    }
-
-    public void setIdueps(String idueps) {
-        this.idueps = idueps;
     }
 
     public String getMon() {
@@ -418,30 +343,6 @@ import java.math.BigDecimal;
 
     public void setLotePedimento(int lotePedimento) {
         this.lotePedimento = lotePedimento;
-    }
-
-    public int getMonedaID() {
-        return monedaID;
-    }
-
-    public void setMonedaID(int monedaID) {
-        this.monedaID = monedaID;
-    }
-
-    public int getPartidaIdOriginal() {
-        return partidaIdOriginal;
-    }
-
-    public void setPartidaIdOriginal(int partidaIdOriginal) {
-        this.partidaIdOriginal = partidaIdOriginal;
-    }
-
-    public String getDescripcionOpcional() {
-        return descripcionOpcional;
-    }
-
-    public void setDescripcionOpcional(String descripcionOpcional) {
-        this.descripcionOpcional = descripcionOpcional;
     }
 
     public String getEstac() {

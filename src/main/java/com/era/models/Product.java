@@ -6,12 +6,14 @@
 package com.era.models;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Index;
 
@@ -327,6 +329,9 @@ public class Product {
     @Column(name = "id_alma", length = 1, columnDefinition = "int default 0")
     private int warehouseID = 0;
 
+    @Transient
+    private List<String> taxes;
+    
     public int getId() {
         return id;
     }
@@ -1125,5 +1130,13 @@ public class Product {
 
     public void setUtility10(float utility10) {
         this.utility10 = utility10;
+    }
+
+    public List<String> getTaxes() {
+        return taxes;
+    }
+
+    public void setTaxes(List<String> taxes) {
+        this.taxes = taxes;
     }
 }
