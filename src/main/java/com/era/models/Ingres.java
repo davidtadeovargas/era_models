@@ -30,7 +30,7 @@ import java.math.BigDecimal;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;
   @Column(name = "activo", nullable = true, length = 45) private String activo = "";
   @Column(name = "falt", nullable = true) private Date falt;  
-  @Column(name = "costo", nullable = true, columnDefinition = "boolean double false") private double costo = 0;
+  @Column(name = "costo", nullable = true, columnDefinition = "float default 0") private double costo = 0;
   @Column(name = "cantsal", nullable = true) private BigDecimal cantsal;  
   @Column(name = "tipcamnac", nullable = false) private BigDecimal tipcamnac;
   @Column(name = "pedimento", nullable = false) private String pedimento = "";
@@ -198,6 +198,5 @@ import java.math.BigDecimal;
         this.fmod = fmod;
     }
 
-    
-        
+            
 }
