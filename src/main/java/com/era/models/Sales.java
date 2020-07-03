@@ -207,6 +207,8 @@ public class Sales {
     @Column(name = "referencia", nullable = true, length = 255)
     private String reference;
 
+    
+    
     public int getId() {
         return id;
     }
@@ -703,6 +705,11 @@ public class Sales {
         this.reference = reference;
     }
 
-
+    public boolean isConfirmed() {
+        return this.estatus.equals("CO");
+    }
     
+    public boolean isCanceled() {
+        return this.estatus.equals("CA");
+    }
 }
