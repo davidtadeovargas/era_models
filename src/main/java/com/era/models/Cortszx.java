@@ -5,6 +5,7 @@
  */
 package com.era.models;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,25 +19,25 @@ import javax.persistence.UniqueConstraint;
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Column(name = "numcort", nullable = false, columnDefinition = "int default 0") private int numcort;
   @Column(name = "cort", nullable = false,length = 30) private String cort;
-  @Column(name = "regis", nullable = true, columnDefinition = "int default 0") private int regis = 0;
+  @Column(name = "regis", nullable = true, columnDefinition = "boolean default false") private boolean regis;
   @Column(name = "totvtas", nullable = false, columnDefinition = "int default 0") private int totvtas;
-  @Column(name = "totingr", nullable = true, columnDefinition = "float default 0") private float totingr;
-  @Column(name = "totegre", nullable = true, columnDefinition = "float default 0") private float totegre;
-  @Column(name = "totcaj", nullable = true, columnDefinition = "float default 0") private float totcaj;
-  @Column(name = "vtabruta", nullable = true, columnDefinition = "float default 0") private float vtabruta = 0;
-  @Column(name = "descu", nullable = true, columnDefinition = "float default 0") private float descu = 0;
-  @Column(name = "devs", nullable = true, columnDefinition = "float default 0") private float devs = 0;
-  @Column(name = "vtanet", nullable = true, columnDefinition = "float default 0") private float vtanet = 0;
-  @Column(name = "impue", nullable = true, columnDefinition = "float default 0") private float impue = 0;
-  @Column(name = "vtanetimp", nullable = true, columnDefinition = "float default 0") private float vtanetimp = 0;
-  @Column(name = "totfacs", nullable = true, columnDefinition = "float default 0") private float totfacs = 0;
-  @Column(name = "tottics", nullable = true, columnDefinition = "float default 0") private float tottics = 0;
+  @Column(name = "totingr", nullable = true) private BigDecimal totingr;
+  @Column(name = "totegre", nullable = true) private BigDecimal totegre;
+  @Column(name = "totcaj", nullable = true) private BigDecimal totcaj;
+  @Column(name = "vtabruta", nullable = true) private BigDecimal vtabruta;
+  @Column(name = "descu", nullable = true) private BigDecimal descu;
+  @Column(name = "devs", nullable = true) private BigDecimal devs;
+  @Column(name = "vtanet", nullable = true) private BigDecimal vtanet;
+  @Column(name = "impue", nullable = true) private BigDecimal impue;
+  @Column(name = "vtanetimp", nullable = true) private BigDecimal vtanetimp;
+  @Column(name = "totfacs", nullable = true) private BigDecimal totfacs;
+  @Column(name = "tottics", nullable = true) private BigDecimal tottics;
   @Column(name = "cantfac", nullable = true, columnDefinition = "int default 0") private int cantfac = 0;
   @Column(name = "canttics", nullable = true, columnDefinition = "int default 0") private int canttics = 0;
-  @Column(name = "totefe", nullable = true, columnDefinition = "float default 0") private float totefe = 0;
-  @Column(name = "totdeb", nullable = true, columnDefinition = "float default 0") private float totdeb = 0;
-  @Column(name = "tottarcred", nullable = true, columnDefinition = "float default 0") private float tottarcred = 0;
-  @Column(name = "totdep", nullable = true, columnDefinition = "float default 0") private float totdep = 0;  
+  @Column(name = "totefe", nullable = true) private BigDecimal totefe;
+  @Column(name = "totdeb", nullable = true) private BigDecimal totdeb;
+  @Column(name = "tottarcred", nullable = true) private BigDecimal tottarcred;
+  @Column(name = "totdep", nullable = true) private BigDecimal totdep;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;
   @Column(name = "nocaj", nullable = false,length = 30) private String nocaj; 
@@ -67,11 +68,11 @@ import javax.persistence.UniqueConstraint;
         this.cort = cort;
     }
 
-    public int getRegis() {
+    public boolean isRegis() {
         return regis;
     }
 
-    public void setRegis(int regis) {
+    public void setRegis(boolean regis) {
         this.regis = regis;
     }
 
@@ -83,91 +84,91 @@ import javax.persistence.UniqueConstraint;
         this.totvtas = totvtas;
     }
 
-    public float getTotingr() {
+    public BigDecimal getTotingr() {
         return totingr;
     }
 
-    public void setTotingr(float totingr) {
+    public void setTotingr(BigDecimal totingr) {
         this.totingr = totingr;
     }
 
-    public float getTotegre() {
+    public BigDecimal getTotegre() {
         return totegre;
     }
 
-    public void setTotegre(float totegre) {
+    public void setTotegre(BigDecimal totegre) {
         this.totegre = totegre;
     }
 
-    public float getTotcaj() {
+    public BigDecimal getTotcaj() {
         return totcaj;
     }
 
-    public void setTotcaj(float totcaj) {
+    public void setTotcaj(BigDecimal totcaj) {
         this.totcaj = totcaj;
     }
 
-    public float getVtabruta() {
+    public BigDecimal getVtabruta() {
         return vtabruta;
     }
 
-    public void setVtabruta(float vtabruta) {
+    public void setVtabruta(BigDecimal vtabruta) {
         this.vtabruta = vtabruta;
     }
 
-    public float getDescu() {
+    public BigDecimal getDescu() {
         return descu;
     }
 
-    public void setDescu(float descu) {
+    public void setDescu(BigDecimal descu) {
         this.descu = descu;
     }
 
-    public float getDevs() {
+    public BigDecimal getDevs() {
         return devs;
     }
 
-    public void setDevs(float devs) {
+    public void setDevs(BigDecimal devs) {
         this.devs = devs;
     }
 
-    public float getVtanet() {
+    public BigDecimal getVtanet() {
         return vtanet;
     }
 
-    public void setVtanet(float vtanet) {
+    public void setVtanet(BigDecimal vtanet) {
         this.vtanet = vtanet;
     }
 
-    public float getImpue() {
+    public BigDecimal getImpue() {
         return impue;
     }
 
-    public void setImpue(float impue) {
+    public void setImpue(BigDecimal impue) {
         this.impue = impue;
     }
 
-    public float getVtanetimp() {
+    public BigDecimal getVtanetimp() {
         return vtanetimp;
     }
 
-    public void setVtanetimp(float vtanetimp) {
+    public void setVtanetimp(BigDecimal vtanetimp) {
         this.vtanetimp = vtanetimp;
     }
 
-    public float getTotfacs() {
+    public BigDecimal getTotfacs() {
         return totfacs;
     }
 
-    public void setTotfacs(float totfacs) {
+    public void setTotfacs(BigDecimal totfacs) {
         this.totfacs = totfacs;
     }
 
-    public float getTottics() {
+    public BigDecimal getTottics() {
         return tottics;
     }
 
-    public void setTottics(float tottics) {
+    public void setTottics(BigDecimal tottics) {
         this.tottics = tottics;
     }
 
@@ -187,35 +188,35 @@ import javax.persistence.UniqueConstraint;
         this.canttics = canttics;
     }
 
-    public float getTotefe() {
+    public BigDecimal getTotefe() {
         return totefe;
     }
 
-    public void setTotefe(float totefe) {
+    public void setTotefe(BigDecimal totefe) {
         this.totefe = totefe;
     }
 
-    public float getTotdeb() {
+    public BigDecimal getTotdeb() {
         return totdeb;
     }
 
-    public void setTotdeb(float totdeb) {
+    public void setTotdeb(BigDecimal totdeb) {
         this.totdeb = totdeb;
     }
 
-    public float getTottarcred() {
+    public BigDecimal getTottarcred() {
         return tottarcred;
     }
 
-    public void setTottarcred(float tottarcred) {
+    public void setTottarcred(BigDecimal tottarcred) {
         this.tottarcred = tottarcred;
     }
 
-    public float getTotdep() {
+    public BigDecimal getTotdep() {
         return totdep;
     }
 
-    public void setTotdep(float totdep) {
+    public void setTotdep(BigDecimal totdep) {
         this.totdep = totdep;
     }
 
@@ -259,6 +260,5 @@ import javax.persistence.UniqueConstraint;
         this.fmod = fmod;
     }
 
-   
   
 }

@@ -709,6 +709,14 @@ public class Sales {
         return this.estatus.equals("CO");
     }
     
+    public boolean isDev() {
+        return this.estatus.equals("DEV");
+    }
+    
+    public boolean isParcialDev() {
+        return this.estatus.equals("PDEV");
+    }
+    
     public boolean isCanceled() {
         return this.estatus.equals("CA");
     }
