@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.Index;
 import java.math.BigDecimal;
+import javax.persistence.Transient;
 //@Index(name="")
 
 @Entity @Table(name = "partvta") public class Partvta {
@@ -23,6 +24,7 @@ import java.math.BigDecimal;
   @Column(name = "cant", nullable = false) private BigDecimal cant;
   @Column(name = "tipcam", nullable = false) private BigDecimal tipcam;
   @Column(name = "devs", nullable = true) private BigDecimal devs = BigDecimal.ZERO;
+  @Transient @Column(name = "toDevs", nullable = true) private BigDecimal toDevs;
   @Column(name = "garan", nullable = true, length = 255) private String garan = "";
   @Column(name = "eskit", nullable = true, columnDefinition = "boolean default false") private boolean eskit = false;
   @Column(name = "kitmae", nullable = true, columnDefinition = "int default 0") private int kitmae = 0;
@@ -369,6 +371,11 @@ import java.math.BigDecimal;
         this.nocaj = nocaj;
     }
 
+    public BigDecimal getToDevs() {
+        return toDevs;
+    }
 
-      
+    public void setToDevs(BigDecimal toDevs) {
+        this.toDevs = toDevs;
+    }
 }

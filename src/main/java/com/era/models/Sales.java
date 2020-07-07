@@ -705,6 +705,16 @@ public class Sales {
         this.reference = reference;
     }
 
+    public boolean isTicketDocument() {
+        return this.documentType.equals("TIK");
+    }
+    public boolean isInvoiceDocument() {
+        return this.documentType.equals("FAC");
+    }
+    public boolean isRemDocument() {
+        return this.documentType.equals("REM");
+    }
+    
     public boolean isConfirmed() {
         return this.estatus.equals("CO");
     }
