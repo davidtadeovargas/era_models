@@ -78,6 +78,9 @@ public class Sales {
     @Column(name = "ptovta", nullable = true, columnDefinition = "boolean default false")
     private boolean salesPoint = false;
     
+    @Column(name = "credit", nullable = true, columnDefinition = "boolean default false")
+    private boolean credit = false;
+    
     @Column(name = "catgral", nullable = true, length = 500)
     private String catgral = "";
     
@@ -730,4 +733,12 @@ public class Sales {
     public boolean isCanceled() {
         return this.estatus.equals("CA");
     }
+
+    public boolean isCredit() {
+        return credit;
+    }
+
+    public void setCredit(boolean credit) {
+        this.credit = credit;
+    }        
 }

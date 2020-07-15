@@ -6,6 +6,7 @@
 package com.era.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -65,7 +66,7 @@ import org.hibernate.annotations.Index;
   @Column(name = "observ", nullable = true, length = 255) private String observ = "";
   @Column(name = "noint", nullable = true, length = 100) private String noint = "";
   @Column(name = "noext", nullable = true, length = 100) private String noext = "";
-  @Column(name = "diacred", nullable = true, length = 21) private String diacred = "";
+  @Column(name = "diacred", nullable = true, columnDefinition = "int default 0") private int diacred;
   @Column(name = "metpag", nullable = true, length = 45) private String metpag = "";
   @Column(name = "cta", nullable = true) private String cta = "0000";
   @Column(name = "encall", nullable = true, length = 255) private String encall = "";
@@ -89,7 +90,7 @@ import org.hibernate.annotations.Index;
   @Column(name = "enestad", nullable = true, length = 255) private String enestad = "";
   @Column(name = "diapag", nullable = true, columnDefinition = "int default 0") private int diapag = 0;
   @Column(name = "pers", nullable = true, length = 2) private String pers = "";
-  @Column(name = "limtcred", nullable = true, columnDefinition = "float default 0") private float limtcred = 0;
+  @Column(name = "limtcred", nullable = true, columnDefinition = "") private BigDecimal limtcred = BigDecimal.ZERO;
   @Column(name = "bloq", nullable = true, columnDefinition = "boolean default false") private boolean bloq = false;
   @Column(name = "bloqlimcred", nullable = true, columnDefinition = "boolean default false") private boolean bloqlimcred = false;
   @Column(name = "ctaconta", nullable = true, length = 30) private String ctaconta = "";
@@ -467,11 +468,11 @@ import org.hibernate.annotations.Index;
         this.noext = noext;
     }
 
-    public String getDiacred() {
+    public int getDiacred() {
         return diacred;
     }
 
-    public void setDiacred(String diacred) {
+    public void setDiacred(int diacred) {
         this.diacred = diacred;
     }
 
@@ -659,11 +660,11 @@ import org.hibernate.annotations.Index;
         this.pers = pers;
     }
 
-    public float getLimtcred() {
+    public BigDecimal getLimtcred() {
         return limtcred;
     }
 
-    public void setLimtcred(float limtcred) {
+    public void setLimtcred(BigDecimal limtcred) {
         this.limtcred = limtcred;
     }
 
@@ -865,6 +866,9 @@ import org.hibernate.annotations.Index;
 
     public void setCashCustomer(boolean cashCustomer) {
         this.cashCustomer = cashCustomer;
-    }   
-   
+    }
+    
+    public boolean hasCredit() {
+        return !bloq && !bloqlimcred && diacred>0 && limtcred.compareTo(BigDecimal.ZERO)>0;
+    }
 }
