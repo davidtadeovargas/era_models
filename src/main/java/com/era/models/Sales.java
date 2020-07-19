@@ -722,6 +722,10 @@ public class Sales {
         return this.estatus.equals("CO");
     }
     
+    public String getConfirmedEstate() {
+        return "CO";
+    }
+    
     public boolean isDev() {
         return this.estatus.equals("DEV");
     }

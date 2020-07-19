@@ -105,8 +105,17 @@ public class DocumentOrigin {
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-
     
-    
-
+    public boolean isInvoice(){
+        return type.compareTo("FAC")==0;
+    }
+    public boolean isRemision(){
+        return type.compareTo("REM")==0;
+    }
+    public boolean isNotc(){
+        return type.compareTo("NOTC")==0;
+    }
+    public boolean isTicket(){
+        return type.compareTo("TIK")==0;
+    }
 }

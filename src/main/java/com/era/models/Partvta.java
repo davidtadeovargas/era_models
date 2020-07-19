@@ -59,6 +59,10 @@ import javax.persistence.Transient;
 @Column(name = "sucu", nullable = false,length = 30) private String sucu;
 @Column(name = "nocaj", nullable = false,length = 30) private String nocaj;  
 
+    @Transient
+    private boolean inventory;
+  
+
     public int getId() {
         return id;
     }
@@ -378,4 +382,12 @@ import javax.persistence.Transient;
     public void setToDevs(BigDecimal toDevs) {
         this.toDevs = toDevs;
     }
+
+    public boolean isInventory() {
+        return inventory;
+    }
+
+    public void setInventory(boolean inventory) {
+        this.inventory = inventory;
+    }        
 }

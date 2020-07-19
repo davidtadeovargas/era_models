@@ -5,7 +5,6 @@
  */
 package com.era.models;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,11 +16,10 @@ import javax.persistence.GenerationType;
 
 @Entity
 @Table(name = "c_formapago", uniqueConstraints = {})
-public class CPaymentForm implements Serializable {
+public class CPaymentForm {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-    
-    @Id
+        
     @Column(name = "c_FormaPago", nullable = false, length = 5)
     private String c_FormaPago;
     
