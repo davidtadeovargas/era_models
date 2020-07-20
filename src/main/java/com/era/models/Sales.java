@@ -708,36 +708,6 @@ public class Sales {
         this.reference = reference;
     }
 
-    public boolean isTicketDocument() {
-        return this.documentType.equals("TIK");
-    }
-    public boolean isInvoiceDocument() {
-        return this.documentType.equals("FAC");
-    }
-    public boolean isRemDocument() {
-        return this.documentType.equals("REM");
-    }
-    
-    public boolean isConfirmed() {
-        return this.estatus.equals("CO");
-    }
-    
-    public String getConfirmedEstate() {
-        return "CO";
-    }
-    
-    public boolean isDev() {
-        return this.estatus.equals("DEV");
-    }
-    
-    public boolean isParcialDev() {
-        return this.estatus.equals("PDEV");
-    }
-    
-    public boolean isCanceled() {
-        return this.estatus.equals("CA");
-    }
-
     public boolean isCredit() {
         return credit;
     }
