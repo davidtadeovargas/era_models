@@ -20,23 +20,29 @@ public class Coin {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_id", nullable = false)
+    @Column(name = "c_moneda_id", nullable = false)
     private int id;
     
-    @Column(name = "code", nullable = false, length = 30)
+    @Column(name = "c_Moneda", nullable = false, length = 30)
     private String code = "";
+    
+    @Column(name = "Descripcion", nullable = false, length = 255)
+    private String description;
+    
+    @Column(name = "Decimales", nullable = true, length = 5)
+    private String decimals;
+    
+    @Column(name = "Porcentaje_variación", nullable = false, length = 11, columnDefinition = "int default 0")
+    private int variationPorcent;
+    
+    @Column(name = "Fecha_inicio_de_vigencia", nullable = false)
+    private Date initVigencyDate;
     
     @Column(name = "val", nullable = true, columnDefinition = "float default 0")
     private float value = 0;
     
-    @Column(name = "mondescrip", nullable = false, length = 255)
-    private String description;
-    
     @Column(name = "simb", nullable = false, length = 5)
     private String simbol;
-    
-    @Column(name = "c_moneda", nullable = false, length = 5)
-    private String c_moneda;
     
     @Column(name = "estac", nullable = false, length = 30)
     private String estac = "";
@@ -50,8 +56,8 @@ public class Coin {
     @Column(name = "mn", nullable = true, columnDefinition = "boolean default false")
     private boolean national = false;
 
-       @Column(name = "falt", nullable = true) private Date falt;
-@Column(name = "fmod", nullable = false) private Date fmod; 
+    @Column(name = "falt", nullable = true) private Date falt;
+    @Column(name = "fmod", nullable = false) private Date fmod; 
 
     public int getId() {
         return id;
@@ -69,14 +75,6 @@ public class Coin {
         this.code = code;
     }
 
-    public float getValue() {
-        return value;
-    }
-
-    public void setValue(float value) {
-        this.value = value;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -85,20 +83,44 @@ public class Coin {
         this.description = description;
     }
 
+    public String getDecimals() {
+        return decimals;
+    }
+
+    public void setDecimals(String decimals) {
+        this.decimals = decimals;
+    }
+
+    public int getVariationPorcent() {
+        return variationPorcent;
+    }
+
+    public void setVariationPorcent(int variationPorcent) {
+        this.variationPorcent = variationPorcent;
+    }
+
+    public Date getInitVigencyDate() {
+        return initVigencyDate;
+    }
+
+    public void setInitVigencyDate(Date initVigencyDate) {
+        this.initVigencyDate = initVigencyDate;
+    }
+
+    public float getValue() {
+        return value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
+    }
+
     public String getSimbol() {
         return simbol;
     }
 
     public void setSimbol(String simbol) {
         this.simbol = simbol;
-    }
-
-    public String getC_moneda() {
-        return c_moneda;
-    }
-
-    public void setC_moneda(String c_moneda) {
-        this.c_moneda = c_moneda;
     }
 
     public String getEstac() {
@@ -148,7 +170,4 @@ public class Coin {
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-
-    
-
 }
