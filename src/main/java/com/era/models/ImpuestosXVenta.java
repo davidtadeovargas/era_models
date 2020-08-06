@@ -16,7 +16,8 @@ import javax.persistence.Id;
 //@Index(name="")
 
 @Entity@Table(name = "impuestos_x_venta")public class ImpuestosXVenta {
-  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "venta", nullable = false) private int venta;
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
+  @Column(name = "venta", nullable = false) private int venta;
   @Column(name = "id_partida", nullable = false, columnDefinition = "int default 0") private int id_partida;
   @Column(name = "impuesto", nullable = false,length = 30) private String impuesto;
   @Column(name = "retencion", nullable = false, columnDefinition = "boolean default false") private boolean retencion;
@@ -27,6 +28,14 @@ import javax.persistence.Id;
   @Column(name = "fvenc", nullable = false) private Date fvenc = new Date();
   @Column(name = "falt", nullable = true) private Date falt;
   @Column(name = "fmod", nullable = false) private Date fmod;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getVenta() {
         return venta;
@@ -115,7 +124,4 @@ import javax.persistence.Id;
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-
-
-  
 }
