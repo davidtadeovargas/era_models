@@ -31,8 +31,8 @@ public class User {
     @Column(name = "descu", nullable = false, columnDefinition = "float default 0")
     private float disccount = 0;
     
-    @Column(name = "cort", nullable = false, length = 3)
-    private String cort = "0";
+    @Column(name = "cort", nullable = false, columnDefinition = "boolean default false")
+    private boolean cort;
     
     @Column(name = "pass", nullable = false, length = 255)
     private String password;
@@ -166,11 +166,11 @@ public class User {
         this.disccount = disccount;
     }
 
-    public String getCort() {
+    public boolean isCort() {
         return cort;
     }
 
-    public void setCort(String cort) {
+    public void setCort(boolean cort) {
         this.cort = cort;
     }
 
