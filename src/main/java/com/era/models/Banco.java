@@ -17,6 +17,7 @@ import javax.persistence.UniqueConstraint;
 @Entity @Table(name = "banco",uniqueConstraints = {@UniqueConstraint( columnNames ={"cuentabanco"})}) public class Banco {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Column(name = "cuentabanco", nullable = false,length = 30) private String cuentabanco;
+  @Column(name = "banco", nullable = false,length = 30) private String banco;
   @Column(name = "descrip", nullable = false,length = 255) private String descrip;
   @Column(name = "estac", nullable = false,length = 30) private String estac;
   @Column(name = "sucu", nullable = false,length = 30) private String sucu;  
@@ -28,6 +29,14 @@ import javax.persistence.UniqueConstraint;
         return id;
     }
 
+    public String getBanco() {
+        return banco;
+    }
+
+    public void setBanco(String banco) {
+        this.banco = banco;
+    }
+    
     public void setId(int id) {
         this.id = id;
     }
