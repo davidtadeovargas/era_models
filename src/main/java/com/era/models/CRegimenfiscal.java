@@ -19,10 +19,9 @@ import javax.persistence.Table;
 public class CRegimenfiscal {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id", nullable = false) private int id;
-    
-    @Id
-    @Column(name = "c_RegimenFiscal", nullable = false, columnDefinition = "int default 0")
-    private int c_RegimenFiscal;
+        
+    @Column(name = "c_RegimenFiscal", nullable = false, length = 4)
+    private String c_RegimenFiscal;
     
     @Column(name = "Descripcion", nullable = false, length = 255)
     private String description;
@@ -50,11 +49,11 @@ public class CRegimenfiscal {
         this.id = id;
     }
 
-    public int getC_RegimenFiscal() {
+    public String getC_RegimenFiscal() {
         return c_RegimenFiscal;
     }
 
-    public void setC_RegimenFiscal(int c_RegimenFiscal) {
+    public void setC_RegimenFiscal(String c_RegimenFiscal) {
         this.c_RegimenFiscal = c_RegimenFiscal;
     }
 
