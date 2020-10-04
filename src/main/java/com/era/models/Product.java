@@ -291,7 +291,7 @@ public class Product {
     private Date fmod;
     
     @Column(name = "clavesat", nullable = false, length = 25)
-    private String keySAT;                
+    private String keySAT;
     
     @Column(name = "provprincipal", length = 1, columnDefinition = "int default 0")
     private int principalProvider = 0;
