@@ -5,6 +5,7 @@
  */
 package com.era.models;
 
+import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,11 +24,24 @@ public class Payment {
     @Column(name = "id_id", nullable = false)
     private int id;
     
-    @Column(name = "code", nullable = false, length = 30)
-    private String code = "";
+    @Column(name = "serie")
+    private String serie;
+    @Column(name = "folio")
+    private String folio;
+    @Column(name = "cuentabanco")
+    private String cuentabanco;
+    @Column(name = "formapago")
+    private String formapago;
+    @Column(name = "concepto")
+    private String concepto;
+    @Column(name = "codigo_cliente_proveedor")
+    private String codigoClienteProveedor;
     
-    @Column(name = "descrip", nullable = true, length = 255)
-    private String description;
+    @Column(name = "importe")
+    private BigDecimal importe;
+    
+    @Column(name = "comentario")
+    private String comentario;
     
     @Column(name = "estac", nullable = false, length = 30)
     private String estac = "";
@@ -36,9 +50,7 @@ public class Payment {
     private String sucu = "";
     
     @Column(name = "nocaj", nullable = false, length = 30)
-    private String nocaj = "";
-
-        
+    private String nocaj = "";        
     @Column(name = "falt", nullable = true) private Date falt;
 @Column(name = "fmod", nullable = false) private Date fmod;
 
@@ -50,20 +62,68 @@ public class Payment {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public String getSerie() {
+        return serie;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setSerie(String serie) {
+        this.serie = serie;
     }
 
-    public String getDescription() {
-        return description;
+    public String getFolio() {
+        return folio;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setFolio(String folio) {
+        this.folio = folio;
+    }
+
+    public String getCuentabanco() {
+        return cuentabanco;
+    }
+
+    public void setCuentabanco(String cuentabanco) {
+        this.cuentabanco = cuentabanco;
+    }
+
+    public String getFormapago() {
+        return formapago;
+    }
+
+    public void setFormapago(String formapago) {
+        this.formapago = formapago;
+    }
+
+    public String getConcepto() {
+        return concepto;
+    }
+
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
+    }
+
+    public String getCodigoClienteProveedor() {
+        return codigoClienteProveedor;
+    }
+
+    public void setCodigoClienteProveedor(String codigoClienteProveedor) {
+        this.codigoClienteProveedor = codigoClienteProveedor;
+    }
+
+    public BigDecimal getImporte() {
+        return importe;
+    }
+
+    public void setImporte(BigDecimal importe) {
+        this.importe = importe;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
     public String getEstac() {
@@ -105,7 +165,4 @@ public class Payment {
     public void setFmod(Date fmod) {
         this.fmod = fmod;
     }
-
-    
-
 }
