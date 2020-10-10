@@ -34,8 +34,33 @@ public class Payment {
     private String formapago;
     @Column(name = "concepto")
     private String concepto;
+    
+    @Column(name = "estatus", nullable = false, length = 10)
+    private String estatus;
+    
     @Column(name = "codigo_cliente_proveedor")
     private String codigoClienteProveedor;
+    
+    @Column(name = "timbr", nullable = true, columnDefinition = "boolean default false")
+    private boolean timbrada;
+    
+    @Column(name = "cadori", nullable = true, length = 2000)
+    private String cadori;
+    
+    @Column(name = "folfisc", nullable = true, length = 100)
+    private String fiscalFolio = "";
+    
+    @Column(name = "transid", nullable = true, length = 100)
+    private String transactionID = "";
+    
+    @Column(name = "sell", nullable = true, length = 1000)
+    private String sell = "";
+    
+    @Column(name = "sellsat", nullable = true, length = 1000)
+    private String sellsat = "";
+    
+    @Column(name = "certsat", nullable = true, length = 1000)
+    private String certsat = "";
     
     @Column(name = "importe")
     private BigDecimal importe;
@@ -164,5 +189,69 @@ public class Payment {
 
     public void setFmod(Date fmod) {
         this.fmod = fmod;
+    }
+
+    public boolean isTimbrada() {
+        return timbrada;
+    }
+
+    public void setTimbrada(boolean timbrada) {
+        this.timbrada = timbrada;
+    }
+
+    public String getCadori() {
+        return cadori;
+    }
+
+    public void setCadori(String cadori) {
+        this.cadori = cadori;
+    }
+
+    public String getFiscalFolio() {
+        return fiscalFolio;
+    }
+
+    public void setFiscalFolio(String fiscalFolio) {
+        this.fiscalFolio = fiscalFolio;
+    }
+
+    public String getTransactionID() {
+        return transactionID;
+    }
+
+    public void setTransactionID(String transactionID) {
+        this.transactionID = transactionID;
+    }
+
+    public String getSell() {
+        return sell;
+    }
+
+    public void setSell(String sell) {
+        this.sell = sell;
+    }
+
+    public String getSellsat() {
+        return sellsat;
+    }
+
+    public void setSellsat(String sellsat) {
+        this.sellsat = sellsat;
+    }
+
+    public String getCertsat() {
+        return certsat;
+    }
+
+    public void setCertsat(String certsat) {
+        this.certsat = certsat;
+    }
+
+    public String getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
     }
 }
