@@ -20,6 +20,7 @@ import javax.persistence.Transient;
 @Entity @Table(name = "partvta") public class Partvta {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)@Column(name = "id_id", nullable = false) private int id;
   @Column(name = "prod", nullable = false,length = 255) private String prod;
+  @Column(name = "clavesat", nullable = false, length = 25) private String keySAT;
   @Index(name="vta") @Column(name = "vta", nullable = false, columnDefinition = "int default 0") private int vta;  
   @Column(name = "cant", nullable = false) private BigDecimal cant;
   @Column(name = "tipcam", nullable = false) private BigDecimal tipcam;
@@ -389,5 +390,13 @@ import javax.persistence.Transient;
 
     public void setInventory(boolean inventory) {
         this.inventory = inventory;
-    }        
+    }
+
+    public String getKeySAT() {
+        return keySAT;
+    }
+
+    public void setKeySAT(String keySAT) {
+        this.keySAT = keySAT;
+    }
 }
